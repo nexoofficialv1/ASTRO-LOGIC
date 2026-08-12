@@ -302,7 +302,7 @@ ShadbalaPlanetProfile _profile(
 
   return ShadbalaPlanetProfile(
     code: 'vedic.shadbala.$planet',
-    ruleVersion: ruleVersion,
+    ruleVersion: _shadbalaRuleVersion,
     planet: planet,
     ucchaBalaVirupas: uccha,
     saptavargajaBalaVirupas: saptavargaja,

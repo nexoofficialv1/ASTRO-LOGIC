@@ -78,29 +78,44 @@ jobs:
           cp pubspec.lock build/release/android/pubspec.lock
 
       - name: Analyze source
+        id: analyze
+        continue-on-error: true
         shell: bash
         run: |
           set -o pipefail
           flutter analyze --no-fatal-infos --no-fatal-warnings 2>&1 | tee build/release/android/flutter_analyze.log
 
       - name: Run Flutter tests
+        id: tests
+        continue-on-error: true
         shell: bash
         run: |
           set -o pipefail
           flutter test 2>&1 | tee build/release/android/flutter_test.log
 
       - name: Verify native astronomical core
+        id: native
+        continue-on-error: true
         shell: bash
         run: |
           set -o pipefail
           ./tool/verify_native_packaging.sh 2>&1 | tee build/release/android/native_verification.log
 
       - name: Build Android release APK
+        id: apk
+        continue-on-error: true
         run: >-
           flutter build apk --release
           --dart-define=ASTRO_LOGIC_EPHEMERIS_BACKEND=astronomy-engine
 
       - name: Package governed Android evidence
+        id: package
+        continue-on-error: true
+        if: >-
+          steps.analyze.outcome == 'success' &&
+          steps.tests.outcome == 'success' &&
+          steps.native.outcome == 'success' &&
+          steps.apk.outcome == 'success'
         shell: bash
         run: |
           set -euo pipefail
@@ -122,12 +137,31 @@ jobs:
             "${tag_args[@]}"
 
       - name: Upload Android evidence bundle
+        if: >-
+          steps.analyze.outcome == 'success' &&
+          steps.tests.outcome == 'success' &&
+          steps.native.outcome == 'success' &&
+          steps.apk.outcome == 'success' &&
+          steps.package.outcome == 'success'
         uses: actions/upload-artifact@v7
         with:
           name: ASTRO-LOGIC-Android-${{ github.run_number }}
           path: build/release/android/package/**
           retention-days: 30
           if-no-files-found: error
+
+      - name: Record Android CI gate outcomes
+        if: always()
+        shell: bash
+        run: |
+          mkdir -p build/release/android
+          {
+            echo "analyze=${{ steps.analyze.outcome }}"
+            echo "tests=${{ steps.tests.outcome }}"
+            echo "native=${{ steps.native.outcome }}"
+            echo "apk=${{ steps.apk.outcome }}"
+            echo "package=${{ steps.package.outcome }}"
+          } | tee build/release/android/CI_GATE_STATUS.txt
 
       - name: Upload Android CI diagnostics
         if: always()
@@ -140,7 +174,31 @@ jobs:
             build/release/android/native_verification.log
             build/release/android/DEPENDENCY_GRAPH.txt
             build/release/android/pubspec.lock
+            build/release/android/CI_GATE_STATUS.txt
             ASTRO_LOGIC_v082_SOURCE_VALIDATION.json
             BUILD_READINESS_AUDIT.json
           retention-days: 14
           if-no-files-found: ignore
+
+      - name: Enforce Android CI gates
+        if: always()
+        shell: bash
+        run: |
+          set -euo pipefail
+          failures=()
+          [[ "${{ steps.analyze.outcome }}" == "success" ]] || failures+=(analyze)
+          [[ "${{ steps.tests.outcome }}" == "success" ]] || failures+=(tests)
+          [[ "${{ steps.native.outcome }}" == "success" ]] || failures+=(native)
+          [[ "${{ steps.apk.outcome }}" == "success" ]] || failures+=(apk)
+          if [[ "${{ steps.analyze.outcome }}" == "success" &&
+                "${{ steps.tests.outcome }}" == "success" &&
+                "${{ steps.native.outcome }}" == "success" &&
+                "${{ steps.apk.outcome }}" == "success" &&
+                "${{ steps.package.outcome }}" != "success" ]]; then
+            failures+=(package)
+          fi
+          if (( ${#failures[@]} > 0 )); then
+            printf 'Android CI gate failure(s): %s\n' "${failures[*]}"
+            exit 1
+          fi
+          echo 'All Android CI gates passed.'
