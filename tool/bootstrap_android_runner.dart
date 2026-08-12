@@ -91,5 +91,15 @@ flutter {
   );
   manifest.writeAsStringSync(manifestSource);
 
+
+  final generatedWidgetTest = File('${root.path}/test/widget_test.dart');
+  if (generatedWidgetTest.existsSync()) {
+    final testSource = generatedWidgetTest.readAsStringSync();
+    if (testSource.contains('A counter smoke test') &&
+        testSource.contains('MyApp')) {
+      generatedWidgetTest.deleteSync();
+    }
+  }
+
   stdout.writeln('Android runner configured for ASTRO LOGIC native ABI.');
 }

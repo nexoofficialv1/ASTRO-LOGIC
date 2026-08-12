@@ -65,5 +65,15 @@ void main() {
     mainCpp.writeAsStringSync(source);
   }
 
+
+  final generatedWidgetTest = File('${root.path}/test/widget_test.dart');
+  if (generatedWidgetTest.existsSync()) {
+    final testSource = generatedWidgetTest.readAsStringSync();
+    if (testSource.contains('A counter smoke test') &&
+        testSource.contains('MyApp')) {
+      generatedWidgetTest.deleteSync();
+    }
+  }
+
   stdout.writeln('Windows runner configured for ASTRO LOGIC native ABI.');
 }

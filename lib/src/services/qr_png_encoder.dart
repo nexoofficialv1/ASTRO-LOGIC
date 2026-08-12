@@ -13,10 +13,10 @@ class QrPngEncoder {
   }) {
     if (data.isEmpty) throw ArgumentError('QR payload cannot be empty');
     if (moduleScale < 1 || moduleScale > 20) {
-      throw ArgumentError.range(moduleScale, 1, 20, 'moduleScale');
+      throw RangeError.range(moduleScale, 1, 20, 'moduleScale');
     }
     if (quietZoneModules < 0 || quietZoneModules > 16) {
-      throw ArgumentError.range(quietZoneModules, 0, 16, 'quietZoneModules');
+      throw RangeError.range(quietZoneModules, 0, 16, 'quietZoneModules');
     }
 
     final code = QrCode.fromData(

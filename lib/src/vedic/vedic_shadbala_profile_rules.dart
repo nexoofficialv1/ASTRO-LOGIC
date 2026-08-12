@@ -1,5 +1,7 @@
 part of 'vedic_shadbala_engine.dart';
 
+const String _shadbalaRuleVersion = VedicShadbalaEngine.ruleVersion;
+
 ShadbalaPlanetProfile _profile(
   String planet,
   _Planet position,
@@ -122,7 +124,7 @@ ShadbalaPlanetProfile _profile(
 
   final evidence = <ChartEvidence>[
     ChartEvidence(
-      ruleId: '$ruleVersion.uccha.$planet',
+      ruleId: '$_shadbalaRuleVersion.uccha.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].siderealLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -131,7 +133,7 @@ ShadbalaPlanetProfile _profile(
           '$planetBn-এর উচ্চবল = ${_fmt(uccha)} বিরূপ; versioned গভীর-নীচ বিন্দু থেকে কৌণিক দূরত্বের সূত্রে গণনা করা হয়েছে।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.saptavargaja.$planet',
+      ruleId: '$_shadbalaRuleVersion.saptavargaja.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].siderealLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -140,7 +142,7 @@ ShadbalaPlanetProfile _profile(
           'D1, D2, D3, D7, D9, D12 ও D30 মিলিয়ে $planetBn-এর সপ্তবর্গজ বল = ${_fmt(saptavargaja)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.ojayugma.$planet',
+      ruleId: '$_shadbalaRuleVersion.ojayugma.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].navamsaSignIndex',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -149,7 +151,7 @@ ShadbalaPlanetProfile _profile(
           'D1/D9-এর বিজোড়-জোড় অবস্থান থেকে $planetBn-এর ওজযুগ্ম বল = ${_fmt(ojayugma)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.kendradi.$planet',
+      ruleId: '$_shadbalaRuleVersion.kendradi.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].signIndex',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -158,7 +160,7 @@ ShadbalaPlanetProfile _profile(
           'অ্যাপের governed whole-sign ভাব কাঠামোতে $house নম্বর ভাব থেকে $planetBn-এর কেন্দ্রাদি বল = ${_fmt(kendradi)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.drekkana.$planet',
+      ruleId: '$_shadbalaRuleVersion.drekkana.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].siderealLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -167,7 +169,7 @@ ShadbalaPlanetProfile _profile(
           'রাশির ১০° দ্রেক্কাণ অংশ থেকে $planetBn-এর দ্রেক্কাণ বল = ${_fmt(drekkana)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.dig.$planet',
+      ruleId: '$_shadbalaRuleVersion.dig.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].siderealLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -177,7 +179,7 @@ ShadbalaPlanetProfile _profile(
     ),
     if (nathonnata != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.nathonnata.$planet',
+        ruleId: '$_shadbalaRuleVersion.nathonnata.$planet',
         outputPath: r'$.metadata.sunHourAngleHours',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -187,7 +189,7 @@ ShadbalaPlanetProfile _profile(
       ),
     if (tribhagaBala != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.tribhaga.$planet',
+        ruleId: '$_shadbalaRuleVersion.tribhaga.$planet',
         outputPath: r'$.metadata.tribhagaThird',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -196,7 +198,7 @@ ShadbalaPlanetProfile _profile(
             'actual Astronomy Engine rise/set interval ${tribhaga!.startUtc} থেকে ${tribhaga!.endUtc}-এর ${tribhaga!.period == 'day' ? 'দিন' : 'রাত'}-এর ${tribhaga!.third} নম্বর তৃতীয়াংশে BPHS 27.12 governed ক্রম অনুযায়ী $planetBn-এর ত্রিভাগ বল = ${_fmt(tribhagaBala)} বিরূপ। দিনের ক্রম বুধ/সূর্য/শনি, রাতের ক্রম চন্দ্র/শুক্র/মঙ্গল; বৃহস্পতি সর্বদা পূর্ণ বল পায়।',
       ),
     ChartEvidence(
-      ruleId: '$ruleVersion.paksha.$planet',
+      ruleId: '$_shadbalaRuleVersion.paksha.$planet',
       outputPath: r'$.planets[?(@.body=="moon")].siderealLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -206,7 +208,7 @@ ShadbalaPlanetProfile _profile(
     ),
     if (varsha != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.varsha.$planet',
+        ruleId: '$_shadbalaRuleVersion.varsha.$planet',
         outputPath: r'$.metadata.varshaLord',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -216,7 +218,7 @@ ShadbalaPlanetProfile _profile(
       ),
     if (masa != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.masa.$planet',
+        ruleId: '$_shadbalaRuleVersion.masa.$planet',
         outputPath: r'$.metadata.masaLord',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -226,7 +228,7 @@ ShadbalaPlanetProfile _profile(
       ),
     if (dina != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.dina.$planet',
+        ruleId: '$_shadbalaRuleVersion.dina.$planet',
         outputPath: r'$.metadata.dinaLord',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -236,7 +238,7 @@ ShadbalaPlanetProfile _profile(
       ),
     if (hora != null)
       ChartEvidence(
-        ruleId: '$ruleVersion.hora.$planet',
+        ruleId: '$_shadbalaRuleVersion.hora.$planet',
         outputPath: r'$.metadata.horaLord',
         kind: EvidenceKind.strength,
         descriptionEn:
@@ -245,14 +247,14 @@ ShadbalaPlanetProfile _profile(
             '$planetBn-এর হোরাবল = ${_fmt(hora)} বিরূপ; daylight-এর ১২ ও night-এর ১২ সমান seasonal hora এবং শনি-বৃহস্পতি-মঙ্গল-সূর্য-শুক্র-বুধ-চন্দ্র ক্রমে ${varshaMasaDinaHora!.horaNumber} নম্বর (${varshaMasaDinaHora!.horaPeriod}) hora-এর অধিপতি ${_planetNamesBn[varshaMasaDinaHora!.horaLord!]}। BPHS 27.13 অনুযায়ী হোরেশ ৬০ বিরূপ পায়।',
       ),
     ChartEvidence(
-      ruleId: '$ruleVersion.yuddha.$planet',
+      ruleId: '$_shadbalaRuleVersion.yuddha.$planet',
       outputPath: yuddha.outputPath,
       kind: EvidenceKind.strength,
       descriptionEn: yuddha.descriptionEn,
       descriptionBn: yuddha.descriptionBn,
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.ayana.$planet',
+      ruleId: '$_shadbalaRuleVersion.ayana.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].tropicalLongitude',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -261,14 +263,14 @@ ShadbalaPlanetProfile _profile(
           'BPHS 27.15-17-এর governed 45/33/12 খণ্ড পদ্ধতিতে tropical longitude ${_fmt(position.tropicalLongitude)}° থেকে $planetBn-এর অয়নবল = ${_fmt(ayana)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.cheshta.$planet',
+      ruleId: '$_shadbalaRuleVersion.cheshta.$planet',
       outputPath: cheshta.outputPath,
       kind: EvidenceKind.strength,
       descriptionEn: cheshta.descriptionEn,
       descriptionBn: cheshta.descriptionBn,
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.drik.$planet',
+      ruleId: '$_shadbalaRuleVersion.drik.$planet',
       outputPath: r'$.planets',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -277,7 +279,7 @@ ShadbalaPlanetProfile _profile(
           'governed BPHS অধ্যায় ২৬/২৭ profile-এ ${drik.contributions.length}টি non-zero প্রাপ্ত Sphuta-Drishti contribution থেকে $planetBn-এর দৃকবল = ${_fmt(drik.virupas)} বিরূপ। শুভ/অশুভ এক-চতুর্থাংশ weighting এবং বুধ/বৃহস্পতির full super-addition প্রতিটি contribution-এ আলাদা করে সংরক্ষিত।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.naisargika.$planet',
+      ruleId: '$_shadbalaRuleVersion.naisargika.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].body',
       kind: EvidenceKind.strength,
       descriptionEn:
@@ -286,7 +288,7 @@ ShadbalaPlanetProfile _profile(
           'সাতটি ধ্রুপদি গ্রহের স্থির স্বাভাবিক-বল স্কেলে $planetBn-এর নৈসর্গিক বল = ${_fmt(naisargika)} বিরূপ।',
     ),
     ChartEvidence(
-      ruleId: '$ruleVersion.aggregateThreshold.$planet',
+      ruleId: '$_shadbalaRuleVersion.aggregateThreshold.$planet',
       outputPath: r'$.planets[?(@.body=="' + planet + r'")].body',
       kind: EvidenceKind.strength,
       descriptionEn: totalShadbala == null

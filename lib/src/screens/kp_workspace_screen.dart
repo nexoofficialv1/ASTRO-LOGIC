@@ -13,9 +13,9 @@ import '../data/client_store.dart';
 import '../localization/app_copy.dart';
 
 class KpWorkspaceScreen extends StatefulWidget {
-  const KpWorkspaceScreen({required this.clientStore, super.key});
+  const KpWorkspaceScreen({this.clientStore, super.key});
 
-  final ClientStore clientStore;
+  final ClientStore? clientStore;
 
   @override
   State<KpWorkspaceScreen> createState() => _KpWorkspaceScreenState();
@@ -491,7 +491,7 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
                       '${copy('kpHorarySnapshot')}: '
                       '${_horarySnapshotId ?? '-'} • '
                       '${copy('kpHorarySavedTotal')}: '
-                      '${widget.clientStore.kpHorarySnapshots.length}',
+                      '${widget.clientStore?.kpHorarySnapshots.length ?? 0}',
                     ),
                     const SizedBox(height: 6),
                     Text(copy('kpHorarySafetyNote')),
@@ -744,10 +744,13 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
         topic: topic,
       );
       final chart = await KpHoraryEngine(KpNativeFfiBridge.open()).cast(input);
-      final snapshotId = await widget.clientStore.createKpHorarySnapshot(
-        input: input,
-        chart: chart,
-      );
+      final store = widget.clientStore;
+      final snapshotId = store == null
+          ? null
+          : await store.createKpHorarySnapshot(
+              input: input,
+              chart: chart,
+            );
       if (!mounted) return;
       setState(() {
         _horaryChart = chart;

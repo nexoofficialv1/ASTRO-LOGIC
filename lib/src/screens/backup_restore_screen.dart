@@ -195,7 +195,7 @@ class _BackupRestoreScreenState extends State<BackupRestoreScreen> {
   }
 
   Future<void> _previewBackup() async {
-    final picked = await FilePicker.platform.pickFiles(
+    final picked = await FilePicker.pickFiles(
       type: FileType.custom,
       allowedExtensions: const [EncryptedBackupService.fileExtension],
       allowMultiple: false,

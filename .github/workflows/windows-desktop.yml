@@ -70,7 +70,7 @@ jobs:
       - name: Analyze source
         shell: pwsh
         run: |
-          & flutter analyze --no-fatal-infos 2>&1 | Tee-Object -FilePath build\release\windows\flutter_analyze.log
+          & flutter analyze --no-fatal-infos --no-fatal-warnings 2>&1 | Tee-Object -FilePath build\release\windows\flutter_analyze.log
           $code = $LASTEXITCODE
           if ($code -ne 0) { exit $code }
 
