@@ -23,6 +23,9 @@ jobs:
       - name: Check out source
         uses: actions/checkout@v6
 
+      - name: Verify Git packaging contract
+        run: python3 tool/validate_git_packaging.py
+
       - name: Source-only readiness audit
         run: python3 tool/static_build_readiness_audit.py
 
@@ -52,13 +55,15 @@ jobs:
           cache: true
 
       - name: Generate governed Android runner
-        run: dart run tool/bootstrap_android_runner.dart
+        run: dart tool/bootstrap_android_runner.dart
 
       - name: Resolve packages
         shell: bash
         run: |
           set -euo pipefail
-          if [[ "${GITHUB_REF_TYPE}" == "tag" || -f pubspec.lock ]]; then
+          if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
+            flutter pub get --enforce-lockfile
+          elif git ls-files --error-unmatch pubspec.lock >/dev/null 2>&1; then
             flutter pub get --enforce-lockfile
           else
             flutter pub get

@@ -45,12 +45,14 @@ jobs:
 
       - name: Generate governed Windows runner
         shell: pwsh
-        run: dart run tool/bootstrap_windows_runner.dart
+        run: dart tool/bootstrap_windows_runner.dart
 
       - name: Resolve packages
         shell: pwsh
         run: |
-          if ($env:GITHUB_REF_TYPE -eq 'tag' -or (Test-Path pubspec.lock)) {
+          if ($env:GITHUB_REF_TYPE -eq 'tag') {
+            flutter pub get --enforce-lockfile
+          } elseif (git ls-files --error-unmatch pubspec.lock 2>$null) {
             flutter pub get --enforce-lockfile
           } else {
             flutter pub get
