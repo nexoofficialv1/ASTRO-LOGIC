@@ -14,9 +14,9 @@ class SignedReportQrView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final image = QrImage(
-      QrCode(
-        payload: QrPayload.fromString(payload),
-        errorCorrectLevel: QrErrorCorrectLevel.medium,
+      QrCode.fromData(
+        data: payload,
+        errorCorrectLevel: QrErrorCorrectLevel.M,
       ),
     );
     return Semantics(

@@ -19,9 +19,9 @@ class QrPngEncoder {
       throw ArgumentError.range(quietZoneModules, 0, 16, 'quietZoneModules');
     }
 
-    final code = QrCode(
-      payload: QrPayload.fromString(data),
-      errorCorrectLevel: QrErrorCorrectLevel.medium,
+    final code = QrCode.fromData(
+      data: data,
+      errorCorrectLevel: QrErrorCorrectLevel.M,
     );
     final image = QrImage(code);
     final modules = image.moduleCount + (quietZoneModules * 2);
