@@ -1,0 +1,252 @@
+{
+  "milestone": "v074",
+  "appVersion": "0.70.0+74",
+  "kpEngineVersion": "1.0.0",
+  "kpRuleVersion": "kp-foundation-v1",
+  "checksPassed": 48,
+  "checksTotal": 48,
+  "failed": [],
+  "runtimeDisclaimer": "Source-only validation; Flutter/Dart SDK unavailable in this container.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v074"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v074 first"
+    },
+    {
+      "code": "ENGINE_VERSION",
+      "passed": true,
+      "detail": "KP engine 1.0.0"
+    },
+    {
+      "code": "RULE_VERSION",
+      "passed": true,
+      "detail": "KP profile frozen"
+    },
+    {
+      "code": "SUB_RULE",
+      "passed": true,
+      "detail": "star/sub contract present"
+    },
+    {
+      "code": "CUSP_RULE",
+      "passed": true,
+      "detail": "cusp framework present"
+    },
+    {
+      "code": "SIG_RULE",
+      "passed": true,
+      "detail": "significator hierarchy present"
+    },
+    {
+      "code": "RP_RULE",
+      "passed": true,
+      "detail": "ruling-planet profile present"
+    },
+    {
+      "code": "KP_AVAILABLE",
+      "passed": true,
+      "detail": "KP dashboard tile available"
+    },
+    {
+      "code": "KP_ROUTE",
+      "passed": true,
+      "detail": "KP dashboard route wired"
+    },
+    {
+      "code": "WORKSPACE",
+      "passed": true,
+      "detail": "KP workspace exists"
+    },
+    {
+      "code": "EXACT_CASTING_OFF",
+      "passed": true,
+      "detail": "native KP casting gated"
+    },
+    {
+      "code": "AYANAMSHA_PENDING",
+      "passed": true,
+      "detail": "no invented KP ayanamsha"
+    },
+    {
+      "code": "PLACIDUS_PENDING",
+      "passed": true,
+      "detail": "no invented Placidus cusps"
+    },
+    {
+      "code": "DISCLOSURE_EN",
+      "passed": true,
+      "detail": "English safety disclosure"
+    },
+    {
+      "code": "DISCLOSURE_BN",
+      "passed": true,
+      "detail": "Bengali safety disclosure present"
+    },
+    {
+      "code": "INTEGER_ARITHMETIC",
+      "passed": true,
+      "detail": "micro-arcsecond arithmetic"
+    },
+    {
+      "code": "VIM_SEQUENCE",
+      "passed": true,
+      "detail": "nine Vimshottari lords"
+    },
+    {
+      "code": "VIM_YEARS",
+      "passed": true,
+      "detail": "Vimshottari year ratios"
+    },
+    {
+      "code": "NAKSHATRAS_27",
+      "passed": true,
+      "detail": "27-name table present"
+    },
+    {
+      "code": "CUSPS_12",
+      "passed": true,
+      "detail": "12-cusp count enforced"
+    },
+    {
+      "code": "SIG_LEVEL_1",
+      "passed": true,
+      "detail": "significator L1"
+    },
+    {
+      "code": "SIG_LEVEL_2",
+      "passed": true,
+      "detail": "significator L2"
+    },
+    {
+      "code": "SIG_LEVEL_3",
+      "passed": true,
+      "detail": "significator L3"
+    },
+    {
+      "code": "SIG_LEVEL_4",
+      "passed": true,
+      "detail": "significator L4"
+    },
+    {
+      "code": "RP_1",
+      "passed": true,
+      "detail": "ruling role 1: ascendantSubLord"
+    },
+    {
+      "code": "RP_2",
+      "passed": true,
+      "detail": "ruling role 2: ascendantStarLord"
+    },
+    {
+      "code": "RP_3",
+      "passed": true,
+      "detail": "ruling role 3: moonStarLord"
+    },
+    {
+      "code": "RP_4",
+      "passed": true,
+      "detail": "ruling role 4: ascendantSignLord"
+    },
+    {
+      "code": "RP_5",
+      "passed": true,
+      "detail": "ruling role 5: moonSignLord"
+    },
+    {
+      "code": "RP_6",
+      "passed": true,
+      "detail": "ruling role 6: moonSubLord"
+    },
+    {
+      "code": "RP_7",
+      "passed": true,
+      "detail": "ruling role 7: dayLord"
+    },
+    {
+      "code": "ENGINE_TEST",
+      "passed": true,
+      "detail": "engine tests present"
+    },
+    {
+      "code": "UI_TEST",
+      "passed": true,
+      "detail": "workspace tests present"
+    },
+    {
+      "code": "SOURCE_DOC",
+      "passed": true,
+      "detail": "KP source governance documented"
+    },
+    {
+      "code": "STATUS_DOC",
+      "passed": true,
+      "detail": "status + next task documented"
+    },
+    {
+      "code": "RELEASE_SCOPE",
+      "passed": true,
+      "detail": "release gate sees remaining modules"
+    },
+    {
+      "code": "REF_YEARS_120",
+      "passed": true,
+      "detail": "Vimshottari total = 120"
+    },
+    {
+      "code": "REF_NAK_SPAN",
+      "passed": true,
+      "detail": "nine sub spans = 13\u00b020\u2032"
+    },
+    {
+      "code": "REF_ZODIAC",
+      "passed": true,
+      "detail": "27 stars tile 360\u00b0"
+    },
+    {
+      "code": "REF_ASHWINI_KETU",
+      "passed": true,
+      "detail": "Ashwini Ketu sub = 7/9\u00b0 = 0\u00b046\u203240\u2033"
+    },
+    {
+      "code": "REF_ASHWINI_VENUS_END",
+      "passed": true,
+      "detail": "Ashwini Venus sub ends exactly 3\u00b0"
+    },
+    {
+      "code": "REF_ALL_ROTATIONS",
+      "passed": true,
+      "detail": "all star-lord rotations close exactly"
+    },
+    {
+      "code": "LOCALE_BLOCKS",
+      "passed": true,
+      "detail": "English/Bengali maps present"
+    },
+    {
+      "code": "LOCALE_NO_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate localization keys"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "English/Bengali key parity"
+    },
+    {
+      "code": "KP_COPY",
+      "passed": true,
+      "detail": "KP copy keys present"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    }
+  ]
+}

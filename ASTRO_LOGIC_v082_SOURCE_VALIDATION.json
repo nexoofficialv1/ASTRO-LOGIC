@@ -1,0 +1,276 @@
+{
+  "validationVersion": "v082-western-modern-source-validator-v1",
+  "milestone": "v082",
+  "appVersion": "0.78.0+82",
+  "databaseSchema": 12,
+  "nativeAbi": "al-abi-9",
+  "westernEngine": "1.1.0",
+  "westernOutputSchema": "western-natal-chart-v2",
+  "westernInputSchema": "western-input-schema-v2",
+  "backupEngine": "1.4.0",
+  "dartFilesScanned": 183,
+  "sourceGatePassed": true,
+  "checksPassed": 48,
+  "checksTotal": 48,
+  "failed": [],
+  "sdkAvailability": {
+    "flutter": null,
+    "dart": null,
+    "cCompiler": "/data/data/com.termux/files/usr/bin/cc"
+  },
+  "flutterRuntimeDisclaimer": "No Flutter analyzer/test/APK/Windows Flutter build success is claimed unless a Flutter/Dart SDK is actually present and those commands are executed.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v082"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v082 first"
+    },
+    {
+      "code": "DB_SCHEMA_12",
+      "passed": true,
+      "detail": "SQLite remains schema 12"
+    },
+    {
+      "code": "BACKUP_ENGINE_14",
+      "passed": true,
+      "detail": "backup engine remains 1.4.0"
+    },
+    {
+      "code": "NO_PUBSPEC_LOCK",
+      "passed": true,
+      "detail": "no untested lockfile fabricated"
+    },
+    {
+      "code": "ENGINE_CONTRACT",
+      "passed": true,
+      "detail": "Western v2 engine/input/output contracts"
+    },
+    {
+      "code": "GOVERNANCE_CONTRACT",
+      "passed": true,
+      "detail": "Western v082 governance profiles"
+    },
+    {
+      "code": "RULERSHIP_MAPPING",
+      "passed": true,
+      "detail": "traditional and modern Scorpio/Aquarius/Pisces mappings are separate"
+    },
+    {
+      "code": "DIGNITY_SEPARATION",
+      "passed": true,
+      "detail": "traditional seven-planet dignity remains authoritative"
+    },
+    {
+      "code": "NATIVE_BODY_CODES",
+      "passed": true,
+      "detail": "legacy 0–6 preserved; modern bodies appended 7–9"
+    },
+    {
+      "code": "NATIVE_MODERN_MAPPING",
+      "passed": true,
+      "detail": "outer planets map directly to Astronomy Engine bodies"
+    },
+    {
+      "code": "ABI_9_METADATA",
+      "passed": true,
+      "detail": "all native FFI metadata reports al-abi-9"
+    },
+    {
+      "code": "WESTERN_BODY_DECOUPLED_FROM_KP",
+      "passed": true,
+      "detail": "Western modern body enumeration does not mutate KP body contract"
+    },
+    {
+      "code": "MINOR_ANGLES",
+      "passed": true,
+      "detail": "five governed minor exact angles"
+    },
+    {
+      "code": "MINOR_ORBS",
+      "passed": true,
+      "detail": "frozen v082 minor operational orbs"
+    },
+    {
+      "code": "MAJOR_ORBS_REGRESSION",
+      "passed": true,
+      "detail": "v081 major orbs preserved"
+    },
+    {
+      "code": "MINOR_DEFAULT_OFF",
+      "passed": true,
+      "detail": "major-only default in consultation orchestrator and standalone workspace"
+    },
+    {
+      "code": "PATTERN_GRANDTRINE",
+      "passed": true,
+      "detail": "grandTrine implementation present"
+    },
+    {
+      "code": "PATTERN_TSQUARE",
+      "passed": true,
+      "detail": "tSquare implementation present"
+    },
+    {
+      "code": "PATTERN_GRANDCROSS",
+      "passed": true,
+      "detail": "grandCross implementation present"
+    },
+    {
+      "code": "PATTERN_STELLIUM",
+      "passed": true,
+      "detail": "stellium implementation present"
+    },
+    {
+      "code": "PATTERN_YOD",
+      "passed": true,
+      "detail": "yod implementation present"
+    },
+    {
+      "code": "PATTERN_KITE",
+      "passed": true,
+      "detail": "kite implementation present"
+    },
+    {
+      "code": "YOD_MINOR_GATE",
+      "passed": true,
+      "detail": "Yod requires the enabled minor-aspect profile"
+    },
+    {
+      "code": "PATTERN_EVIDENCE",
+      "passed": true,
+      "detail": "patterns retain component geometry/orbs and do not predict life events"
+    },
+    {
+      "code": "NO_CROSS_SYSTEM_UPLIFT",
+      "passed": true,
+      "detail": "Western output cannot auto-uplift other systems or predict real-world events"
+    },
+    {
+      "code": "SNAPSHOT_V2_SETTINGS",
+      "passed": true,
+      "detail": "new Western settings bound into existing immutable input snapshot hash"
+    },
+    {
+      "code": "KP_SNAPSHOT_SIGNATURE_REGRESSION",
+      "passed": true,
+      "detail": "KP input snapshot API remains Western-independent"
+    },
+    {
+      "code": "ORCHESTRATOR_V2",
+      "passed": true,
+      "detail": "consultation orchestration persists and casts same explicit profile settings"
+    },
+    {
+      "code": "WORKSPACE_SELECTORS",
+      "passed": true,
+      "detail": "Traditional/Modern and Major-only/Major+Minor selectors"
+    },
+    {
+      "code": "WORKSPACE_EVIDENCE_PANELS",
+      "passed": true,
+      "detail": "modern planets, aspect table, pattern panel, rulership and dignity sections"
+    },
+    {
+      "code": "WESTERN_AVAILABLE",
+      "passed": true,
+      "detail": "Western remains available on Dashboard"
+    },
+    {
+      "code": "COMING_SOON_VASTU",
+      "passed": true,
+      "detail": "vastu remains Coming Soon"
+    },
+    {
+      "code": "COMING_SOON_PALMISTRY",
+      "passed": true,
+      "detail": "palmistry remains Coming Soon"
+    },
+    {
+      "code": "COMING_SOON_PRACTICE",
+      "passed": true,
+      "detail": "practice remains Coming Soon"
+    },
+    {
+      "code": "DASHBOARD_ROUTE",
+      "passed": true,
+      "detail": "Western route retained"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "EN=628, BN=628"
+    },
+    {
+      "code": "LOCALE_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate EN/BN keys"
+    },
+    {
+      "code": "LOCALE_V082_KEYS",
+      "passed": true,
+      "detail": "all v082 copy keys present in EN/BN"
+    },
+    {
+      "code": "SOURCE_PROVENANCE",
+      "passed": true,
+      "detail": "astronomy and Western-rule provenance documented"
+    },
+    {
+      "code": "NO_UNIVERSAL_ORB_CLAIM",
+      "passed": true,
+      "detail": "orb policy explicitly governed rather than universalized"
+    },
+    {
+      "code": "MODERN_REFERENCE_FIXTURE",
+      "passed": true,
+      "detail": "independent rounded modern-planet fixture is versioned"
+    },
+    {
+      "code": "NATIVE_REFERENCE_TEST_HOOK",
+      "passed": true,
+      "detail": "modern fixtures execute inside native regression test"
+    },
+    {
+      "code": "ASPECT_BOUNDARY_FIXTURES",
+      "passed": true,
+      "detail": "inclusive orb boundaries and minor default-off behavior verified"
+    },
+    {
+      "code": "PATTERN_FIXTURES",
+      "passed": true,
+      "detail": "positive and loose-geometry negative pattern fixtures verified"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    },
+    {
+      "code": "DART_STRUCTURAL_SCAN",
+      "passed": true,
+      "detail": "183 Dart files scanned"
+    },
+    {
+      "code": "NATIVE_C_COMPILE_RUN",
+      "passed": true,
+      "detail": "Sun      actual=352.3838892 lat=-0.0000213 jpl=352.3837496 error= 0.0001396\nMoon     actual=107.7246106 lat= 3.0789422 jpl=107.7249757 error= 0.0003651\nMars     actual=235.2511681 lat= 1.5329681 jpl=235.2504762 error= 0.0006919\nMercury  actual=356.2318337 lat=-1.1929160 jpl=356.2301156 error= 0.0017181\nJupiter  actual=279.5631474 lat= 0.2435759 jpl=279.5629920 error= 0.0001554\nVenus    actual=327.8467585 lat=-0.9841553 jpl=327.8470168 error= 0.0002583\nSaturn   actual=226.1324506 lat= 2.5282715 jpl=226.1325234 error= 0.0000728\nUranus   modern= 65.3420182 external= 65.3422222 error= 0.0002040\nNeptune  modern=  4.0824061 external=  4.0791667 error= 0.0032395\nPluto    modern=303.9063638 external=303.9066667 error= 0.0003029\nLahiri= 23.6212396 Asc=259.8330326 TrueNode= 70.1004067 (-0.054733/day) MeanNode= 70.7318634 (-0.052954/day) SunHA=12.43022h Tribhaga=night/2 [-0.269088285,0.233005742]d AstroDay=-0.766337898 Varsha=-333.653167663/-333.787781727 Masa=-28.631338443/-28.750657259\nKP classic ayanamsha= 23.5395078 Asc=259.8330326 MC=179.4110296 Placidus fixture=PASS\nPASS: native calculations and required shared ABI exports"
+    },
+    {
+      "code": "FLUTTER_SDK_DETECTED",
+      "passed": false,
+      "detail": "Flutter SDK unavailable; no flutter analyze/test/build claim",
+      "informational": true
+    },
+    {
+      "code": "DART_SDK_DETECTED",
+      "passed": false,
+      "detail": "Dart SDK unavailable; no dart runtime test claim",
+      "informational": true
+    }
+  ]
+}

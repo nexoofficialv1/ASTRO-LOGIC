@@ -1,0 +1,357 @@
+{
+  "milestone": "v080",
+  "appVersion": "0.76.0+80",
+  "databaseSchema": 12,
+  "horaryEngine": "1.1.0",
+  "horaryOutputSchema": "kp-horary-chart-v2",
+  "horaryConfirmationSchema": "kp-horary-rp-confirmation-v1",
+  "horaryConfirmationProfile": "kp-horary-query-rp-overlap-v1",
+  "backupEngine": "1.4.0",
+  "dartFilesScanned": 176,
+  "checksPassed": 68,
+  "checksTotal": 68,
+  "failed": [],
+  "flutterRuntimeDisclaimer": "Flutter/Dart SDK unavailable; no analyzer/widget/APK/Windows Flutter build success claimed.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v080"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v080 first"
+    },
+    {
+      "code": "DB_SCHEMA_12",
+      "passed": true,
+      "detail": "SQLite schema remains v12"
+    },
+    {
+      "code": "HORARY_ENGINE",
+      "passed": true,
+      "detail": "horary engine 1.1.0"
+    },
+    {
+      "code": "HORARY_CONTRACTS",
+      "passed": true,
+      "detail": "v080 horary contracts"
+    },
+    {
+      "code": "CONFIRM_ENGINE",
+      "passed": true,
+      "detail": "RP confirmation contracts"
+    },
+    {
+      "code": "STANDARD_RP_SUBSET",
+      "passed": true,
+      "detail": "four-role standard confidence subset"
+    },
+    {
+      "code": "DAY_LORD_AUDIT_ONLY",
+      "passed": true,
+      "detail": "Day Lord excluded from confidence"
+    },
+    {
+      "code": "SUB_LORD_AUDIT_ONLY",
+      "passed": true,
+      "detail": "expanded sub-lord roles audit-only"
+    },
+    {
+      "code": "PROMISE_GATE",
+      "passed": true,
+      "detail": "only Promise eligible"
+    },
+    {
+      "code": "PRIMARY_CUSP_OVERLAP",
+      "passed": true,
+      "detail": "primary cusp sub-lord fruitful RP overlap required"
+    },
+    {
+      "code": "CONTRADICTION",
+      "passed": true,
+      "detail": "detrimental standard RP preserved"
+    },
+    {
+      "code": "PARTIAL_STATE",
+      "passed": true,
+      "detail": "partial state retained"
+    },
+    {
+      "code": "INSUFFICIENT_STATE",
+      "passed": true,
+      "detail": "insufficient state retained"
+    },
+    {
+      "code": "MODERATE_CEILING",
+      "passed": true,
+      "detail": "no High confidence state"
+    },
+    {
+      "code": "NO_NATAL_DBA",
+      "passed": true,
+      "detail": "no natal DBA/birth reuse"
+    },
+    {
+      "code": "NO_FUTURE_SCAN",
+      "passed": true,
+      "detail": "no future transit/date claim"
+    },
+    {
+      "code": "HORARY_INTEGRATION",
+      "passed": true,
+      "detail": "confirmation integrated into chart"
+    },
+    {
+      "code": "OUTPUT_HASH_BOUND",
+      "passed": true,
+      "detail": "confirmation serialized into immutable output"
+    },
+    {
+      "code": "GOV_NO_FUTURE_TIMING",
+      "passed": true,
+      "detail": "chart governance explicit"
+    },
+    {
+      "code": "GENERAL_SAFE",
+      "passed": true,
+      "detail": "general Horary has no RP auto judgment"
+    },
+    {
+      "code": "QUERY_MOMENT_RP",
+      "passed": true,
+      "detail": "query moment RPs used"
+    },
+    {
+      "code": "NUMBER_TABLE_RETAINED",
+      "passed": true,
+      "detail": "v079 1-249 table retained"
+    },
+    {
+      "code": "PLACIDUS_2ARCSEC",
+      "passed": true,
+      "detail": "cusp binding hard gate retained"
+    },
+    {
+      "code": "TECH_TIME_NOT_EVENT",
+      "passed": true,
+      "detail": "solver time remains non-event"
+    },
+    {
+      "code": "GOVERNANCE_V5",
+      "passed": true,
+      "detail": "governance disclosure updated"
+    },
+    {
+      "code": "DB_TABLE_RETAINED",
+      "passed": true,
+      "detail": "schema12 horary table retained"
+    },
+    {
+      "code": "DB_IMMUTABLE",
+      "passed": true,
+      "detail": "Horary immutability triggers retained"
+    },
+    {
+      "code": "STORE_HASH",
+      "passed": true,
+      "detail": "store hashes v2 output"
+    },
+    {
+      "code": "BACKUP_ENGINE",
+      "passed": true,
+      "detail": "backup engine unchanged"
+    },
+    {
+      "code": "BACKUP_APP_VERSION",
+      "passed": true,
+      "detail": "backup metadata current"
+    },
+    {
+      "code": "BACKUP_SCHEMA_RANGE",
+      "passed": true,
+      "detail": "schema 9-12 compatibility retained"
+    },
+    {
+      "code": "BACKUP_HORARY_HASH",
+      "passed": true,
+      "detail": "Horary output hash revalidation retained"
+    },
+    {
+      "code": "UI_RP_SECTION",
+      "passed": true,
+      "detail": "Horary RP UI wired"
+    },
+    {
+      "code": "UI_CONTRADICTION_LIST",
+      "passed": true,
+      "detail": "mixed/detrimental evidence visible"
+    },
+    {
+      "code": "UI_SAFETY",
+      "passed": true,
+      "detail": "RP safety note visible"
+    },
+    {
+      "code": "TEST_ENGINE_INTEGRATION",
+      "passed": true,
+      "detail": "Horary chart integration test updated"
+    },
+    {
+      "code": "TEST_CONFIRM_STATES",
+      "passed": true,
+      "detail": "confirmation state tests present"
+    },
+    {
+      "code": "TEST_AUDIT_ONLY",
+      "passed": true,
+      "detail": "audit-only RP tests present"
+    },
+    {
+      "code": "SOURCE_DOC",
+      "passed": true,
+      "detail": "source governance documented"
+    },
+    {
+      "code": "STATUS_DOC",
+      "passed": true,
+      "detail": "status and next task documented"
+    },
+    {
+      "code": "README_CURRENT",
+      "passed": true,
+      "detail": "README current"
+    },
+    {
+      "code": "PRODUCT_CURRENT",
+      "passed": true,
+      "detail": "product spec current"
+    },
+    {
+      "code": "DATABASE_NOTE",
+      "passed": true,
+      "detail": "database note"
+    },
+    {
+      "code": "BACKUP_NOTE",
+      "passed": true,
+      "detail": "backup security note"
+    },
+    {
+      "code": "ANDROID_WIRING",
+      "passed": true,
+      "detail": "Android native wiring retained"
+    },
+    {
+      "code": "WINDOWS_WIRING",
+      "passed": true,
+      "detail": "Windows native wiring retained"
+    },
+    {
+      "code": "REFERENCE_249",
+      "passed": true,
+      "detail": "249 table reference rows"
+    },
+    {
+      "code": "REFERENCE_CONTIGUOUS",
+      "passed": true,
+      "detail": "0-360 continuity"
+    },
+    {
+      "code": "REFERENCE_SIGN_CONTAINED",
+      "passed": true,
+      "detail": "every number sign-contained"
+    },
+    {
+      "code": "SIM_CORROBORATED",
+      "passed": true,
+      "detail": "primary fruitful overlap -> moderate corroboration"
+    },
+    {
+      "code": "SIM_CONTRADICTORY",
+      "passed": true,
+      "detail": "detrimental RP -> contradiction"
+    },
+    {
+      "code": "SIM_PARTIAL",
+      "passed": true,
+      "detail": "other fruitful RP -> partial"
+    },
+    {
+      "code": "SIM_NOT_ELIGIBLE",
+      "passed": true,
+      "detail": "non-promise blocks promotion"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "EN/BN key parity"
+    },
+    {
+      "code": "LOCALE_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate localization keys"
+    },
+    {
+      "code": "COPY_kpHoraryRpTiming",
+      "passed": true,
+      "detail": "kpHoraryRpTiming localized"
+    },
+    {
+      "code": "COPY_kpHoraryRpState",
+      "passed": true,
+      "detail": "kpHoraryRpState localized"
+    },
+    {
+      "code": "COPY_kpHoraryPrimaryRpOverlap",
+      "passed": true,
+      "detail": "kpHoraryPrimaryRpOverlap localized"
+    },
+    {
+      "code": "COPY_kpHoraryFruitfulRp",
+      "passed": true,
+      "detail": "kpHoraryFruitfulRp localized"
+    },
+    {
+      "code": "COPY_kpHoraryMixedRp",
+      "passed": true,
+      "detail": "kpHoraryMixedRp localized"
+    },
+    {
+      "code": "COPY_kpHoraryDetrimentalRp",
+      "passed": true,
+      "detail": "kpHoraryDetrimentalRp localized"
+    },
+    {
+      "code": "COPY_kpHoraryConfidence",
+      "passed": true,
+      "detail": "kpHoraryConfidence localized"
+    },
+    {
+      "code": "COPY_kpHoraryRpSafety",
+      "passed": true,
+      "detail": "kpHoraryRpSafety localized"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    },
+    {
+      "code": "DART_LEXICAL",
+      "passed": true,
+      "detail": "Dart lexical structure clean"
+    },
+    {
+      "code": "DART_FILE_COUNT",
+      "passed": true,
+      "detail": "176 Dart source/test/tool files scanned"
+    },
+    {
+      "code": "NATIVE_EXECUTION",
+      "passed": true,
+      "detail": "Sun      actual=352.3838892 lat=-0.0000213 jpl=352.3837496 error= 0.0001396\nMoon     actual=107.7246106 lat= 3.0789422 jpl=107.7249757 error= 0.0003651\nMars     actual=235.2511681 lat= 1.5329681 jpl=235.2504762 error= 0.0006919\nMercury  actual=356.2318337 lat=-1.1929160 jpl=356.2301156 error= 0.0017181\nJupiter  actual=279.5631474 lat= 0.2435759 jpl=279.5629920 error= 0.0001554\nVenus    actual=327.8467585 lat=-0.9841553 jpl=327.8470168 error= 0.0002583\nSaturn   actual=226.1324506 lat= 2.5282715 jpl=226.1325234 error= 0.0000728\nLahiri= 23.6212396 Asc=259.8330326 TrueNode= 70.1004066 (-0.054734/day) MeanNode= 70.7318634 (-0.052954/day) SunHA=12.43022h Tribhaga=night/2 [-0.269088285,0.233005742]d AstroDay=-0.766337898 Varsha=-333.653167663/-333.787781727 Masa=-28.631338443/-28.750657259\nKP classic ayanamsha= 23.5395078 Asc=259.8330326 MC=179.4110296 Placidus fixture=PASS\nPASS: native calculations and required shared ABI exports"
+    }
+  ]
+}

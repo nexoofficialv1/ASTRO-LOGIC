@@ -1,0 +1,272 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v065",
+  "appVersion": "0.61.0+65",
+  "feature": "Numerology Name Candidate Comparison Engine v1",
+  "validationKind": "source-contract-static-readiness",
+  "flutterSdkAvailable": false,
+  "dartSdkAvailable": false,
+  "compileOrFlutterTestClaimed": false,
+  "dartFileCount": 126,
+  "passed": true,
+  "checkCount": 48,
+  "passedCount": 48,
+  "failedCount": 0,
+  "checks": [
+    {
+      "name": "pubspec version 0.61.0+65",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "changelog top 0.61.0+65",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology calculation engine 2.1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology calculation schema profile-v3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "name candidate comparison profile frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "alternate candidate cap 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "baseline-equivalent candidate rejection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normalized duplicate candidate rejection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "professional selection membership gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "neutral candidate statuses only",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate ranking disabled in payload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate automatic selection disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "legal name-change recommendation disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "core overlap not favourability signal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate audit binds professional selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology judgment engine 2.1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology judgment schema analysis-v3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "judgment emits candidate reviews",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate arithmetic confidence capped Medium",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate caution rejects lucky/best and legal-name change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "global Numerology confidence remains Low",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate review serialization has no ranking",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "analysis policy limits one selected candidate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "analysis policy requires Medium arithmetic confidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "snapshot orchestrator accepts candidate inputs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "snapshot integrity input binds candidate set and focus",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "workspace has alternate spelling input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "workspace has manual professional focus",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "workspace repeats no-favourability warning",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "localization has EN and BN candidate keys",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Professional Report engine 1.4.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Professional Report renders name candidate reviews",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "engine tests cover no ranking and no auto selection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "engine tests cover duplicate/baseline/selection/limit gates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "judgment tests cover candidate review",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "snapshot tests cover candidate/focus hash mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "workspace tests cover alternate spelling field and cap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report tests include candidate review fixture",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "product spec marks candidate comparison completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "rule-source register says no new predictive source",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "judgment governance documents comparison",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "v065 status exists with next locked task",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stale candidate-pending roadmap phrase removed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all relative Dart imports resolve",
+      "passed": true,
+      "detail": "126 Dart files checked"
+    },
+    {
+      "name": "all Dart lexical delimiters balanced",
+      "passed": true,
+      "detail": "126 Dart files checked"
+    },
+    {
+      "name": "all Dart sources UTF-8 and non-empty",
+      "passed": true,
+      "detail": "126 Dart files checked"
+    },
+    {
+      "name": "static build-readiness errors 0",
+      "passed": true,
+      "detail": "{\"errorsFailed\": 0, \"passed\": 10, \"warningsFailed\": 2}"
+    },
+    {
+      "name": "static build-readiness known warnings only",
+      "passed": true,
+      "detail": "large Dart file watchlist + pubspec.lock release gate"
+    }
+  ],
+  "staticBuildReadinessOutput": [
+    "PASS REQUIRED_BUILD_FILES: All required build/bootstrap files are present.",
+    "PASS VERSION_ALIGNMENT: pubspec=0.61.0+65, changelog=0.61.0+65",
+    "PASS CI_FLUTTER_PIN: Android and Windows CI must both pin Flutter 3.44.9.",
+    "PASS CI_ANALYZE_TEST_GATES: Both platform workflows include analyzer and test gates.",
+    "PASS GENERATED_RUNNERS_NOT_COMMITTED: Platform runners remain generated-at-build-time.",
+    "PASS NO_BUNDLED_FONTS: No font binaries are bundled.",
+    "PASS NO_UNRESOLVED_MARKERS: No TODO/FIXME/HACK/XXX markers found.",
+    "PASS RELATIVE_IMPORTS: All relative Dart imports resolve to local files.",
+    "WARN LARGE_DART_FILES: Large-file watchlist: lib/src/vedic/vedic_lagna_judgment_engine.dart=2921, lib/src/vedic/vedic_shadbala_engine.dart=1842, lib/src/screens/consultation_detail_screen.dart=1418, lib/src/services/kundli_judgment_policy.dart=1280, lib/src/models/kundli_analysis.dart=1280, lib/src/vedic/vedic_advanced_yoga_dosha_engine.dart=1027",
+    "WARN PUBSPEC_LOCK_RELEASE_GATE: pubspec.lock is not present; generate and retain it at the final Flutter build checkpoint for reproducible resolution.",
+    "PASS DASHBOARD_PLACEHOLDER_GOVERNANCE: Unimplemented dashboard modules are explicitly marked Coming Soon.",
+    "PASS NEW_CONSULTATION_CONTROL: Dashboard New Consultation control routes into the client/consultation workflow.",
+    "{\"errorsFailed\": 0, \"passed\": 10, \"warningsFailed\": 2}"
+  ]
+}

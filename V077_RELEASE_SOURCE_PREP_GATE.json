@@ -1,0 +1,76 @@
+{
+  "contract": "astro-logic-final-release-source-gate-v1",
+  "appVersion": "0.73.0+77",
+  "expectedTag": "v0.73.0+77",
+  "suppliedTag": null,
+  "requiresLock": false,
+  "requiresFullScope": false,
+  "pendingModules": [
+    "western",
+    "vastu",
+    "palmistry",
+    "practice"
+  ],
+  "scope": "source/release metadata only; does not claim Flutter analyze/test/build success",
+  "checks": [
+    {
+      "code": "VERSION_ALIGNMENT",
+      "passed": true,
+      "blocking": true,
+      "detail": "pubspec=0.73.0+77, changelog=0.73.0+77"
+    },
+    {
+      "code": "RELEASE_TAG_MATCH",
+      "passed": true,
+      "blocking": true,
+      "detail": "expected=v0.73.0+77, supplied=not supplied"
+    },
+    {
+      "code": "LOCKFILE_COMMITTABLE",
+      "passed": true,
+      "blocking": true,
+      "detail": "pubspec.lock is not ignored and can be committed for release qualification."
+    },
+    {
+      "code": "LOCKFILE_PRESENT",
+      "passed": true,
+      "blocking": true,
+      "detail": "pubspec.lock absent; allowed for source-preparation, forbidden when --require-lock is set."
+    },
+    {
+      "code": "RELEASE_CONTRACT_FILES",
+      "passed": true,
+      "blocking": true,
+      "detail": "Release gate scripts/workflows are present."
+    },
+    {
+      "code": "ENFORCED_LOCK_RESOLUTION",
+      "passed": true,
+      "blocking": true,
+      "detail": "Release workflows use lock-enforced package resolution."
+    },
+    {
+      "code": "TAG_TRIGGER_COVERAGE",
+      "passed": true,
+      "blocking": true,
+      "detail": "Android, Windows and source-release workflows all declare v* tag triggers."
+    },
+    {
+      "code": "RELEASE_EVIDENCE_PACKAGING",
+      "passed": true,
+      "blocking": true,
+      "detail": "Both platform workflows package versioned release evidence."
+    },
+    {
+      "code": "FULL_PRODUCT_SCOPE",
+      "passed": true,
+      "blocking": true,
+      "detail": "Coming Soon modules: western, vastu, palmistry, practice. Source preparation may continue; a full-scope commercial release tag must remain blocked."
+    }
+  ],
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "releaseSourceGatePassed": true
+  }
+}

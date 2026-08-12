@@ -1,0 +1,36 @@
+{
+  "validationVersion": "astro-logic-v082-github-push-ready-v1",
+  "appVersion": "0.78.0+82",
+  "flutterCiPin": "3.44.7",
+  "androidMainPushEnabled": true,
+  "windowsMainPushEnabled": false,
+  "pubspecLockPresent": false,
+  "workflows": {
+    "android-apk.yml": {
+      "jobs": [
+        "build-apk"
+      ]
+    },
+    "release-source-gate.yml": {
+      "jobs": [
+        "release-source-contract"
+      ]
+    },
+    "windows-desktop.yml": {
+      "jobs": [
+        "build-windows"
+      ]
+    }
+  },
+  "sourceValidatorPassed": true,
+  "readinessAudit": {
+    "errorsFailed": 0,
+    "warningsFailed": 1,
+    "passed": 14
+  },
+  "pushScriptSafety": {
+    "existingRepoOnly": true,
+    "rejectsNonEmptyRemote": true,
+    "forcePush": false
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "auditVersion": "build-readiness-audit-v2",
+  "appVersion": "0.78.0+82",
+  "scope": "source-only; does not claim Flutter runtime compilation",
+  "findings": [
+    {
+      "code": "REQUIRED_BUILD_FILES",
+      "severity": "error",
+      "passed": true,
+      "detail": "All required build/bootstrap files are present."
+    },
+    {
+      "code": "VERSION_ALIGNMENT",
+      "severity": "error",
+      "passed": true,
+      "detail": "pubspec=0.78.0+82, changelog=0.78.0+82"
+    },
+    {
+      "code": "CI_FLUTTER_PIN",
+      "severity": "error",
+      "passed": true,
+      "detail": "Android, Windows and release-source CI must pin Flutter 3.44.7."
+    },
+    {
+      "code": "CI_ANALYZE_TEST_GATES",
+      "severity": "error",
+      "passed": true,
+      "detail": "Both platform workflows include analyzer and test gates."
+    },
+    {
+      "code": "CI_RELEASE_TAG_GATES",
+      "severity": "error",
+      "passed": true,
+      "detail": "Android, Windows and source release workflows enforce tagged-release lock resolution."
+    },
+    {
+      "code": "CI_RELEASE_EVIDENCE_PACKAGING",
+      "severity": "error",
+      "passed": true,
+      "detail": "Android and Windows workflows package governed release evidence."
+    },
+    {
+      "code": "GENERATED_RUNNERS_NOT_COMMITTED",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Platform runners remain generated-at-build-time."
+    },
+    {
+      "code": "NO_BUNDLED_FONTS",
+      "severity": "error",
+      "passed": true,
+      "detail": "No font binaries are bundled."
+    },
+    {
+      "code": "NO_UNRESOLVED_MARKERS",
+      "severity": "warning",
+      "passed": true,
+      "detail": "No TODO/FIXME/HACK/XXX markers found."
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "severity": "error",
+      "passed": true,
+      "detail": "All relative Dart imports resolve to local files."
+    },
+    {
+      "code": "LARGE_DART_FILES",
+      "severity": "warning",
+      "passed": true,
+      "detail": "Large-file watchlist: lib/src/data/client_store.dart=1406, lib/src/services/kundli_judgment_policy.dart=1280, lib/src/models/kundli_analysis.dart=1280, lib/src/localization/app_copy.dart=1277, lib/src/vedic/vedic_lagna_judgment_house_rules.dart=1128, lib/src/vedic/vedic_advanced_yoga_dosha_engine.dart=1027, lib/src/western/western_chart_engine.dart=1005"
+    },
+    {
+      "code": "PUBSPEC_LOCK_COMMITTABLE",
+      "severity": "error",
+      "passed": true,
+      "detail": "pubspec.lock is not ignored and can be committed for final release qualification."
+    },
+    {
+      "code": "PUBSPEC_LOCK_RELEASE_GATE",
+      "severity": "warning",
+      "passed": false,
+      "detail": "pubspec.lock is not present; generate and retain it at the final Flutter build checkpoint for reproducible resolution."
+    },
+    {
+      "code": "DASHBOARD_PLACEHOLDER_GOVERNANCE",
+      "severity": "error",
+      "passed": true,
+      "detail": "Unimplemented dashboard modules are explicitly marked Coming Soon."
+    },
+    {
+      "code": "NEW_CONSULTATION_CONTROL",
+      "severity": "error",
+      "passed": true,
+      "detail": "Dashboard New Consultation control routes into the client/consultation workflow."
+    }
+  ],
+  "summary": {
+    "errorsFailed": 0,
+    "warningsFailed": 1,
+    "passed": 14
+  }
+}

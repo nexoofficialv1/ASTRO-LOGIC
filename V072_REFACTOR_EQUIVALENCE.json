@@ -1,0 +1,58 @@
+{
+  "vedic_lagna_judgment_timing_yoga.dart": {
+    "equal": true,
+    "expectedSha": "2b56f82558e0c59326ea5f66ae1dc4142c715e67c4730a4f9ae859b2deff2de3",
+    "actualSha": "2b56f82558e0c59326ea5f66ae1dc4142c715e67c4730a4f9ae859b2deff2de3"
+  },
+  "vedic_lagna_judgment_house_rules.dart": {
+    "equal": true,
+    "expectedSha": "9b3eb24955a6919fcd4c22d00b1ddd4f5d993e05f6d0474adf4b159ac05bd2cc",
+    "actualSha": "9b3eb24955a6919fcd4c22d00b1ddd4f5d993e05f6d0474adf4b159ac05bd2cc"
+  },
+  "vedic_lagna_judgment_support.dart": {
+    "equal": true,
+    "expectedSha": "fb3f127494b94776fac8500c71a1260359bd1693c5a7c3d18ed692034fed65d0",
+    "actualSha": "fb3f127494b94776fac8500c71a1260359bd1693c5a7c3d18ed692034fed65d0"
+  },
+  "vedic_shadbala_profile_rules.dart": {
+    "equal": true,
+    "expectedSha": "8f9376da43f4cc8ffd94037ed10ca031c429a4e6ba45794192849f0ce5c4580c",
+    "actualSha": "8f9376da43f4cc8ffd94037ed10ca031c429a4e6ba45794192849f0ce5c4580c"
+  },
+  "vedic_shadbala_kala_geometry.dart": {
+    "equal": true,
+    "expectedSha": "47b5001610ce86880cc00dcf455d1b3868b62212f0f58a3ca2ba6e76634c4267",
+    "actualSha": "47b5001610ce86880cc00dcf455d1b3868b62212f0f58a3ca2ba6e76634c4267"
+  },
+  "vedic_shadbala_support.dart": {
+    "equal": true,
+    "expectedSha": "2e2f426fccd348b8a30ef58682af01d49358eed3c5da7b9522606aa95d13b4bd",
+    "actualSha": "2e2f426fccd348b8a30ef58682af01d49358eed3c5da7b9522606aa95d13b4bd"
+  },
+  "consultation_detail_analysis_sections.dart": {
+    "equal": true,
+    "expectedSha": "5545307bcedc91e62db09b1813d750502730d8e170afb529c452c42adc25ebab",
+    "actualSha": "5545307bcedc91e62db09b1813d750502730d8e170afb529c452c42adc25ebab"
+  },
+  "consultation_detail_analysis_widgets.dart": {
+    "equal": true,
+    "expectedSha": "54a7761b7a94443bf4fff4cb6eaf25d668b3e5b4c6d498366658644d39af48b8",
+    "actualSha": "54a7761b7a94443bf4fff4cb6eaf25d668b3e5b4c6d498366658644d39af48b8"
+  },
+  "encrypted_backup_merge_support.dart": {
+    "equal": true,
+    "expectedSha": "2083785bb0c9f5d157ae39e08a4663a7ac9fa87a07130f67fb071ccd44b1ad5a",
+    "actualSha": "2083785bb0c9f5d157ae39e08a4663a7ac9fa87a07130f67fb071ccd44b1ad5a"
+  },
+  "encrypted_backup_envelope_support.dart": {
+    "equal": true,
+    "expectedSha": "d2eb4aebd8d196506de8ac5eac1ce37842bbffbf2d50ff7c2c134cfc56ab9cdc",
+    "actualSha": "d2eb4aebd8d196506de8ac5eac1ce37842bbffbf2d50ff7c2c134cfc56ab9cdc"
+  },
+  "encrypted_backup_integrity_support.dart": {
+    "equal": true,
+    "expectedSha": "226cc1b6b92e2a505e753e39ec009e6df6b89e2a9cf32fe65087e3fb6d9341ee",
+    "actualSha": "226cc1b6b92e2a505e753e39ec009e6df6b89e2a9cf32fe65087e3fb6d9341ee"
+  },
+  "allEqual": true
+}

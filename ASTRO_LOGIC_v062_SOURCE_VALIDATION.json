@@ -1,0 +1,54 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v0.58.0+62 / development package v062",
+  "scope": "source-only validation; Flutter/Dart SDK unavailable in this container",
+  "checks": [
+    {
+      "name": "pubspec_version_0_58_0_62",
+      "passed": true
+    },
+    {
+      "name": "changelog_top_0_58_0_62",
+      "passed": true
+    },
+    {
+      "name": "remedy_engine_file",
+      "passed": true
+    },
+    {
+      "name": "remedy_engine_test",
+      "passed": true
+    },
+    {
+      "name": "judgment_v31",
+      "passed": true
+    },
+    {
+      "name": "schema_v31",
+      "passed": true
+    },
+    {
+      "name": "legacy_score_gemstone_removed",
+      "passed": true
+    },
+    {
+      "name": "report_engine_1_1_0",
+      "passed": true
+    },
+    {
+      "name": "report_renders_remedy_candidates",
+      "passed": true
+    },
+    {
+      "name": "all_dart_delimiters_balanced",
+      "passed": true
+    }
+  ],
+  "dartFilesScanned": 121,
+  "dartStructuralIssues": [],
+  "result": "PASS",
+  "knownBuildReadinessWarnings": [
+    "large Dart file maintainability watchlist",
+    "pubspec.lock deferred to final Flutter build checkpoint"
+  ]
+}

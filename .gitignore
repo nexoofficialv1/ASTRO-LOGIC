@@ -1,0 +1,30 @@
+# Flutter and Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+
+# Generated Flutter runners (created in CI)
+android/
+windows/
+linux/
+macos/
+ios/
+web/
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local signing material and secrets
+*.jks
+*.keystore
+key.properties
+.env
+.env.*
+!.env.example

@@ -1,0 +1,345 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v066",
+  "appVersion": "0.62.0+66",
+  "feature": "Professional Report Signing & Approval Workflow v1",
+  "validationKind": "source-contract-static-readiness",
+  "flutterSdkAvailable": false,
+  "dartSdkAvailable": false,
+  "compileOrFlutterTestClaimed": false,
+  "dartFileCount": 129,
+  "passed": true,
+  "checkCount": 61,
+  "passedCount": 61,
+  "failedCount": 0,
+  "checks": [
+    {
+      "name": "pubspec version 0.62.0+66",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "changelog top 0.62.0+66",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SQLite schema version 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema v9 onCreate approval table hook",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema v9 upgrade hook",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "professional_report_approvals table exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "one approval per report snapshot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval report hash DB guard",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval consultation DB guard",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval UPDATE blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval DELETE blocked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval decisions frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval integrity payload binds report identity and practitioner",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval engine version 1.0.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval statement v1 frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "practitioner name and designation required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reservations note gate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval SHA-256 function exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed-report SHA-256 function exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "store reloads approvals on startup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "store blocks second approval",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "store re-verifies immutable report before approval",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "store persists report/approval/signed hashes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval audit event persisted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UI requires explicit acknowledgement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UI exposes two approval decisions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UI states electronic sign-off is not certificate-backed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report preview receives ClientStore for approval persistence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export engine 1.1.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export contract v2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export re-verifies source report hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export re-verifies approval hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export re-verifies signed-report hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed export filename marker",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export artifact carries approval and signed hashes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PDF embeds approval verification block",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX embeds approval verification block",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX core metadata embeds approval/signed hashes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "English approval localization present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bengali approval localization present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval regression test exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed export tamper regression exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed DOCX metadata regression exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "professional report generation schema unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Vedic judgment remains 32.0.0 / v32",
+      "passed": true,
+      "detail": "verified in lib/src/vedic/vedic_lagna_judgment_engine.dart"
+    },
+    {
+      "name": "Numerology remains profile-v3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "product spec marks signed workflow completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export governance document updated",
+      "passed": true,
+      "detail": "export v2 + schema v9 + explicit non-PKI disclosure"
+    },
+    {
+      "name": "v066 status document exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stale signing-pending phrase removed from current docs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all relative Dart imports resolve",
+      "passed": true,
+      "detail": "129 Dart files checked"
+    },
+    {
+      "name": "all Dart lexical delimiters balanced",
+      "passed": true,
+      "detail": "129 Dart files checked"
+    },
+    {
+      "name": "all Dart sources UTF-8 and non-empty",
+      "passed": true,
+      "detail": "129 Dart files checked"
+    },
+    {
+      "name": "static build-readiness errors 0",
+      "passed": true,
+      "detail": "{\"errorsFailed\": 0, \"passed\": 10, \"warningsFailed\": 2}"
+    },
+    {
+      "name": "static build-readiness known warnings only",
+      "passed": true,
+      "detail": "large Dart file watchlist + pubspec.lock release gate"
+    },
+    {
+      "name": "SQLite approval simulation: ddl executes",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    },
+    {
+      "name": "SQLite approval simulation: wrong report hash rejected",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    },
+    {
+      "name": "SQLite approval simulation: valid approval inserted",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    },
+    {
+      "name": "SQLite approval simulation: update rejected",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    },
+    {
+      "name": "SQLite approval simulation: delete rejected",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    },
+    {
+      "name": "SQLite approval simulation: second approval rejected",
+      "passed": true,
+      "detail": "Python sqlite3 executed source DDL/trigger semantics"
+    }
+  ],
+  "staticBuildReadinessOutput": [
+    "PASS REQUIRED_BUILD_FILES: All required build/bootstrap files are present.",
+    "PASS VERSION_ALIGNMENT: pubspec=0.62.0+66, changelog=0.62.0+66",
+    "PASS CI_FLUTTER_PIN: Android and Windows CI must both pin Flutter 3.44.9.",
+    "PASS CI_ANALYZE_TEST_GATES: Both platform workflows include analyzer and test gates.",
+    "PASS GENERATED_RUNNERS_NOT_COMMITTED: Platform runners remain generated-at-build-time.",
+    "PASS NO_BUNDLED_FONTS: No font binaries are bundled.",
+    "PASS NO_UNRESOLVED_MARKERS: No TODO/FIXME/HACK/XXX markers found.",
+    "PASS RELATIVE_IMPORTS: All relative Dart imports resolve to local files.",
+    "WARN LARGE_DART_FILES: Large-file watchlist: lib/src/vedic/vedic_lagna_judgment_engine.dart=2921, lib/src/vedic/vedic_shadbala_engine.dart=1842, lib/src/screens/consultation_detail_screen.dart=1426, lib/src/services/kundli_judgment_policy.dart=1280, lib/src/models/kundli_analysis.dart=1280, lib/src/data/client_store.dart=1066, lib/src/vedic/vedic_advanced_yoga_dosha_engine.dart=1027",
+    "WARN PUBSPEC_LOCK_RELEASE_GATE: pubspec.lock is not present; generate and retain it at the final Flutter build checkpoint for reproducible resolution.",
+    "PASS DASHBOARD_PLACEHOLDER_GOVERNANCE: Unimplemented dashboard modules are explicitly marked Coming Soon.",
+    "PASS NEW_CONSULTATION_CONTROL: Dashboard New Consultation control routes into the client/consultation workflow.",
+    "{\"errorsFailed\": 0, \"passed\": 10, \"warningsFailed\": 2}"
+  ],
+  "sqliteApprovalSimulation": {
+    "ddl_executes": true,
+    "wrong_report_hash_rejected": true,
+    "valid_approval_inserted": true,
+    "update_rejected": true,
+    "delete_rejected": true,
+    "second_approval_rejected": true
+  }
+}

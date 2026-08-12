@@ -1,0 +1,105 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v0.59.0+63 / development package v063",
+  "scope": "source-only validation; Flutter/Dart SDK unavailable in this container",
+  "checks": [
+    {
+      "name": "pubspec_version_0_59_0_63",
+      "passed": true
+    },
+    {
+      "name": "changelog_top_0_59_0_63",
+      "passed": true
+    },
+    {
+      "name": "gemstone_engine_file",
+      "passed": true
+    },
+    {
+      "name": "gemstone_engine_rule_v1",
+      "passed": true
+    },
+    {
+      "name": "gemstone_mapping_profile_v1",
+      "passed": true
+    },
+    {
+      "name": "judgment_engine_v32",
+      "passed": true
+    },
+    {
+      "name": "schema_v32",
+      "passed": true
+    },
+    {
+      "name": "seven_classical_planets_only",
+      "passed": true
+    },
+    {
+      "name": "three_status_model",
+      "passed": true
+    },
+    {
+      "name": "report_engine_1_2_0",
+      "passed": true
+    },
+    {
+      "name": "report_renders_gemstone_reviews",
+      "passed": true
+    },
+    {
+      "name": "consultation_ui_renders_gemstone_reviews",
+      "passed": true
+    },
+    {
+      "name": "localization_has_gemstone_review_labels",
+      "passed": true
+    },
+    {
+      "name": "policy_validates_gemstone_reviews",
+      "passed": true
+    },
+    {
+      "name": "gemstone_engine_test_exists",
+      "passed": true
+    },
+    {
+      "name": "test_covers_contraindicated",
+      "passed": true
+    },
+    {
+      "name": "test_covers_eligible",
+      "passed": true
+    },
+    {
+      "name": "test_covers_node_block",
+      "passed": true
+    },
+    {
+      "name": "no_auto_substitute_or_wearing_fields",
+      "passed": true
+    },
+    {
+      "name": "all_dart_delimiters_balanced",
+      "passed": true,
+      "detail": "125 Dart files scanned"
+    },
+    {
+      "name": "no_stale_current_v062_schema_refs",
+      "passed": true,
+      "detail": "0 unexpected stale refs"
+    },
+    {
+      "name": "build_readiness_zero_errors",
+      "passed": true
+    }
+  ],
+  "dartFilesScanned": 125,
+  "dartStructuralIssues": [],
+  "staleReferenceIssues": [],
+  "result": "PASS",
+  "knownBuildReadinessWarnings": [
+    "large Dart file maintainability watchlist",
+    "pubspec.lock deferred to final Flutter build checkpoint"
+  ]
+}

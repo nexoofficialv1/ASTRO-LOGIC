@@ -1,0 +1,125 @@
+name: Build Windows Desktop
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: windows-desktop-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Source-only readiness audit
+        shell: pwsh
+        run: python tool/static_build_readiness_audit.py
+
+      - name: Verify final release source contract on tags
+        if: github.ref_type == 'tag'
+        shell: pwsh
+        run: >-
+          python tool/final_release_gate.py
+          --require-lock
+          --require-full-scope
+          --tag "$env:GITHUB_REF_NAME"
+          --json build/release/windows/PREBUILD_RELEASE_GATE.json
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.44.7"
+          channel: stable
+          cache: true
+
+      - name: Generate governed Windows runner
+        shell: pwsh
+        run: dart run tool/bootstrap_windows_runner.dart
+
+      - name: Resolve packages
+        shell: pwsh
+        run: |
+          if ($env:GITHUB_REF_TYPE -eq 'tag' -or (Test-Path pubspec.lock)) {
+            flutter pub get --enforce-lockfile
+          } else {
+            flutter pub get
+          }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Capture dependency graph
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path build\release\windows | Out-Null
+          flutter pub deps --style=compact | Out-File -Encoding utf8 build\release\windows\DEPENDENCY_GRAPH.txt
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Copy-Item pubspec.lock build\release\windows\pubspec.lock
+
+      - name: Analyze source
+        shell: pwsh
+        run: |
+          & flutter analyze --no-fatal-infos 2>&1 | Tee-Object -FilePath build\release\windows\flutter_analyze.log
+          $code = $LASTEXITCODE
+          if ($code -ne 0) { exit $code }
+
+      - name: Run Flutter tests
+        shell: pwsh
+        run: |
+          & flutter test 2>&1 | Tee-Object -FilePath build\release\windows\flutter_test.log
+          $code = $LASTEXITCODE
+          if ($code -ne 0) { exit $code }
+
+      - name: Build Windows release
+        shell: pwsh
+        run: >-
+          flutter build windows --release
+          --dart-define=ASTRO_LOGIC_EPHEMERIS_BACKEND=astronomy-engine
+
+      - name: Verify packaged native DLL
+        shell: pwsh
+        run: |
+          $dll = Get-ChildItem -Path build\windows -Recurse -Filter astro_logic_astronomy.dll | Select-Object -First 1
+          if (-not $dll) { throw 'astro_logic_astronomy.dll was not packaged.' }
+          "Native DLL: $($dll.FullName)" | Tee-Object -FilePath build\release\windows\native_verification.log
+          "SHA256: $((Get-FileHash -Algorithm SHA256 $dll.FullName).Hash.ToLowerInvariant())" | Add-Content build\release\windows\native_verification.log
+          $dll.Directory.FullName | Out-File -Encoding utf8 build\release\windows\release_dir.txt
+
+      - name: Package governed Windows evidence
+        shell: pwsh
+        run: |
+          $releaseDir = (Get-Content build\release\windows\release_dir.txt -Raw).Trim()
+          $tagArgs = @()
+          if ($env:GITHUB_REF_TYPE -eq 'tag') {
+            $tagArgs = @('--release-tag', $env:GITHUB_REF_NAME)
+          }
+          & python tool/package_release_artifact.py `
+            --platform windows `
+            --input-dir "$releaseDir" `
+            --output-dir build/release/windows/package `
+            --analyze-log build/release/windows/flutter_analyze.log `
+            --test-log build/release/windows/flutter_test.log `
+            --native-log build/release/windows/native_verification.log `
+            --dependency-graph build/release/windows/DEPENDENCY_GRAPH.txt `
+            --lock-file pubspec.lock `
+            --source-commit "$env:GITHUB_SHA" `
+            --run-id "$env:GITHUB_RUN_ID" `
+            @tagArgs
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Upload Windows evidence bundle
+        uses: actions/upload-artifact@v7
+        with:
+          name: ASTRO-LOGIC-Windows-${{ github.run_number }}
+          path: build/release/windows/package/**
+          retention-days: 30
+          if-no-files-found: error

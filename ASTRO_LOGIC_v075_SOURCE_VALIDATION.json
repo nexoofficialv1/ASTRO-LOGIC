@@ -1,0 +1,344 @@
+{
+  "milestone": "v075",
+  "appVersion": "0.71.0+75",
+  "kpNativeEngine": "1.0.0",
+  "outputSchemaVersion": "kp-native-chart-v1",
+  "nativeAbi": "al-abi-7",
+  "checksPassed": 66,
+  "checksTotal": 66,
+  "failed": [],
+  "nativeRuntimeVerification": "C compiler/executable verification performed; Flutter/Dart SDK unavailable.",
+  "flutterRuntimeDisclaimer": "No flutter analyze/test/APK/Windows Flutter build success is claimed.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v075"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v075 first"
+    },
+    {
+      "code": "SQLITE_UNCHANGED",
+      "passed": true,
+      "detail": "schema v11"
+    },
+    {
+      "code": "NATIVE_ABI_DART",
+      "passed": true,
+      "detail": "Dart bridges declare ABI v7"
+    },
+    {
+      "code": "NATIVE_EXPORT_DECL",
+      "passed": true,
+      "detail": "KP frame ABI declared"
+    },
+    {
+      "code": "NATIVE_EXPORT_IMPL",
+      "passed": true,
+      "detail": "KP frame ABI implemented"
+    },
+    {
+      "code": "KP_ENGINE_ID",
+      "passed": true,
+      "detail": "native KP engine id"
+    },
+    {
+      "code": "KP_ENGINE_VERSION",
+      "passed": true,
+      "detail": "native KP engine 1.0.0"
+    },
+    {
+      "code": "KP_SCHEMA",
+      "passed": true,
+      "detail": "native output schema"
+    },
+    {
+      "code": "KP_INPUT_SCHEMA",
+      "passed": true,
+      "detail": "KP input snapshot schema"
+    },
+    {
+      "code": "KP_GOV_V2",
+      "passed": true,
+      "detail": "KP governance v2"
+    },
+    {
+      "code": "AYAN_PROFILE",
+      "passed": true,
+      "detail": "classic KP profile frozen"
+    },
+    {
+      "code": "HOUSE_PROFILE",
+      "passed": true,
+      "detail": "Placidus profile frozen"
+    },
+    {
+      "code": "CASTING_ENABLED",
+      "passed": true,
+      "detail": "native casting enabled"
+    },
+    {
+      "code": "VALID_RANGE",
+      "passed": true,
+      "detail": "governed date range"
+    },
+    {
+      "code": "HISTORICAL_DISCLOSURE",
+      "passed": true,
+      "detail": "historical ambiguity disclosed"
+    },
+    {
+      "code": "NO_PORPHYRY",
+      "passed": true,
+      "detail": "no silent fallback disclosed"
+    },
+    {
+      "code": "NEWCOMB_CONSTANTS",
+      "passed": true,
+      "detail": "Newcomb/Kinoshita profile coefficients"
+    },
+    {
+      "code": "J1900_VALUE",
+      "passed": true,
+      "detail": "classic J1900 reference"
+    },
+    {
+      "code": "KP_DATE_GATE_NATIVE",
+      "passed": true,
+      "detail": "native profile date gate"
+    },
+    {
+      "code": "PLACIDUS_SOLVER",
+      "passed": true,
+      "detail": "native Placidus root solver"
+    },
+    {
+      "code": "PLACIDUS_12",
+      "passed": true,
+      "detail": "12-cusp ABI arrays"
+    },
+    {
+      "code": "POLAR_GATE",
+      "passed": true,
+      "detail": "polar geometry rejected"
+    },
+    {
+      "code": "ASC_MC",
+      "passed": true,
+      "detail": "KP Asc/MC native frame"
+    },
+    {
+      "code": "NODE_BOTH",
+      "passed": true,
+      "detail": "both node modes exposed"
+    },
+    {
+      "code": "FFI_ARRAYS",
+      "passed": true,
+      "detail": "Dart FFI fixed cusp arrays"
+    },
+    {
+      "code": "FFI_KP_SYMBOL",
+      "passed": true,
+      "detail": "Dart FFI symbol lookup"
+    },
+    {
+      "code": "FFI_PLATFORM",
+      "passed": true,
+      "detail": "Android/Windows FFI"
+    },
+    {
+      "code": "FULL_PLANETS",
+      "passed": true,
+      "detail": "seven native planetary bodies"
+    },
+    {
+      "code": "RAHU_KETU",
+      "passed": true,
+      "detail": "Rahu/Ketu projected"
+    },
+    {
+      "code": "NINE_POINTS",
+      "passed": true,
+      "detail": "planet classification path"
+    },
+    {
+      "code": "CUSPS_CLASSIFIED",
+      "passed": true,
+      "detail": "all generated cusps classified"
+    },
+    {
+      "code": "ASC_CLASSIFIED",
+      "passed": true,
+      "detail": "native Asc classified"
+    },
+    {
+      "code": "MC_CLASSIFIED",
+      "passed": true,
+      "detail": "native MC classified"
+    },
+    {
+      "code": "RULING_FROM_NATIVE",
+      "passed": true,
+      "detail": "ruling planets from native chart"
+    },
+    {
+      "code": "NO_EVENT_GUARANTEE",
+      "passed": true,
+      "detail": "conservative judgment flags"
+    },
+    {
+      "code": "CONSULT_KP_INPUT",
+      "passed": true,
+      "detail": "immutable KP input snapshot"
+    },
+    {
+      "code": "CONSULT_ORCHESTRATOR",
+      "passed": true,
+      "detail": "consultation output integration"
+    },
+    {
+      "code": "CONSULT_SYSTEM_GUARD",
+      "passed": true,
+      "detail": "KP system selection required"
+    },
+    {
+      "code": "CONSULT_UI_BUTTON",
+      "passed": true,
+      "detail": "consultation KP action wired"
+    },
+    {
+      "code": "WORKSPACE_NATIVE",
+      "passed": true,
+      "detail": "native workspace casting"
+    },
+    {
+      "code": "WORKSPACE_MANUAL",
+      "passed": true,
+      "detail": "manual cross-check retained"
+    },
+    {
+      "code": "FOUNDATION_UNCHANGED",
+      "passed": true,
+      "detail": "v074 arithmetic contracts retained"
+    },
+    {
+      "code": "EXTERNAL_FIXTURE",
+      "passed": true,
+      "detail": "numeric external oracle documented"
+    },
+    {
+      "code": "FIXTURE_NO_RUNTIME",
+      "passed": true,
+      "detail": "fixture is development-only"
+    },
+    {
+      "code": "FIXTURE_12",
+      "passed": true,
+      "detail": "12 reference cusps"
+    },
+    {
+      "code": "EPHEMERIS_DOC",
+      "passed": true,
+      "detail": "ephemeris governance updated"
+    },
+    {
+      "code": "KP_SOURCE_DOC",
+      "passed": true,
+      "detail": "KP source governance updated"
+    },
+    {
+      "code": "STATUS_DOC",
+      "passed": true,
+      "detail": "status/next task documented"
+    },
+    {
+      "code": "BUILD_WIRING_ANDROID",
+      "passed": true,
+      "detail": "Android native CMake retained"
+    },
+    {
+      "code": "BUILD_WIRING_WINDOWS",
+      "passed": true,
+      "detail": "Windows native CMake retained"
+    },
+    {
+      "code": "NATIVE_SYMBOL_GATE",
+      "passed": true,
+      "detail": "native packaging symbol gate includes KP"
+    },
+    {
+      "code": "NATIVE_KP_TEST",
+      "passed": true,
+      "detail": "native KP reference test"
+    },
+    {
+      "code": "DART_ENGINE_TEST",
+      "passed": true,
+      "detail": "Dart engine test source present"
+    },
+    {
+      "code": "DART_UI_TEST",
+      "passed": true,
+      "detail": "KP workspace test updated"
+    },
+    {
+      "code": "BACKUP_APP_VERSION",
+      "passed": true,
+      "detail": "backup metadata uses current app version"
+    },
+    {
+      "code": "LOCALE_BLOCKS",
+      "passed": true,
+      "detail": "EN/BN maps found"
+    },
+    {
+      "code": "LOCALE_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate localization keys"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "EN/BN key parity"
+    },
+    {
+      "code": "COPY_runKpNativeChart",
+      "passed": true,
+      "detail": "runKpNativeChart localized"
+    },
+    {
+      "code": "COPY_kpNativeCasting",
+      "passed": true,
+      "detail": "kpNativeCasting localized"
+    },
+    {
+      "code": "COPY_kpPlacidusNoFallback",
+      "passed": true,
+      "detail": "kpPlacidusNoFallback localized"
+    },
+    {
+      "code": "COPY_kpNativeReady",
+      "passed": true,
+      "detail": "kpNativeReady localized"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    },
+    {
+      "code": "DART_LEXICAL_STRUCTURE",
+      "passed": true,
+      "detail": "Dart delimiter/string structure clean"
+    },
+    {
+      "code": "NATIVE_EXECUTION",
+      "passed": true,
+      "detail": "Sun      actual=352.3838892 lat=-0.0000213 jpl=352.3837496 error= 0.0001396\nMoon     actual=107.7246106 lat= 3.0789422 jpl=107.7249757 error= 0.0003651\nMars     actual=235.2511681 lat= 1.5329681 jpl=235.2504762 error= 0.0006919\nMercury  actual=356.2318337 lat=-1.1929160 jpl=356.2301156 error= 0.0017181\nJupiter  actual=279.5631474 lat= 0.2435759 jpl=279.5629920 error= 0.0001554\nVenus    actual=327.8467585 lat=-0.9841553 jpl=327.8470168 error= 0.0002583\nSaturn   actual=226.1324506 lat= 2.5282715 jpl=226.1325234 error= 0.0000728\nLahiri= 23.6212396 Asc=259.8330326 TrueNode= 70.1004066 (-0.054734/day) MeanNode= 70.7318634 (-0.052954/day) SunHA=12.43022h Tribhaga=night/2 [-0.269088285,0.233005742]d AstroDay=-0.766337898 Varsha=-333.653167663/-333.787781727 Masa=-28.631338443/-28.750657259\nKP classic ayanamsha= 23.5395078 Asc=259.8330326 MC=179.4110296 Placidus fixture=PASS\nPASS: native calculations and required shared ABI exports"
+    }
+  ]
+}

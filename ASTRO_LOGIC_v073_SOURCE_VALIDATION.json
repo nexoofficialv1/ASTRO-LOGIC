@@ -1,0 +1,121 @@
+{
+  "contract": "astro-logic-v073-validation-v1",
+  "appVersion": "0.69.0+73",
+  "scope": "source-only + synthetic evidence simulation; no Flutter runtime claim",
+  "checks": [
+    {
+      "code": "APP_VERSION",
+      "passed": true,
+      "detail": "version=0.69.0+73"
+    },
+    {
+      "code": "CHANGELOG_VERSION",
+      "passed": true,
+      "detail": "changelog=0.69.0+73"
+    },
+    {
+      "code": "LOCK_COMMITTABLE",
+      "passed": true,
+      "detail": "pubspec.lock is not ignored"
+    },
+    {
+      "code": "LOCK_ABSENT_SOURCE_ONLY",
+      "passed": true,
+      "detail": "source-only checkpoint does not invent a lock"
+    },
+    {
+      "code": "RELEASE_FILES",
+      "passed": true,
+      "detail": "missing=[]"
+    },
+    {
+      "code": "FLUTTER_PIN",
+      "passed": true,
+      "detail": "three workflows pin Flutter 3.44.9"
+    },
+    {
+      "code": "TAG_TRIGGERS",
+      "passed": true,
+      "detail": "three workflows declare v* tags"
+    },
+    {
+      "code": "LOCK_ENFORCEMENT",
+      "passed": true,
+      "detail": "release paths enforce pubspec.lock"
+    },
+    {
+      "code": "PLATFORM_PACKAGING",
+      "passed": true,
+      "detail": "Android+Windows package evidence"
+    },
+    {
+      "code": "FULL_SCOPE_TAG_GATE",
+      "passed": true,
+      "detail": "all tag release paths require full scope"
+    },
+    {
+      "code": "STATIC_READINESS",
+      "passed": true,
+      "detail": "static readiness has no blocking error"
+    },
+    {
+      "code": "EXPECTED_LOCK_WARNING",
+      "passed": true,
+      "detail": "{'errorsFailed': 0, 'warningsFailed': 1, 'passed': 14}"
+    },
+    {
+      "code": "PREP_GATE",
+      "passed": true,
+      "detail": "source preparation gate passes without making release claim"
+    },
+    {
+      "code": "PENDING_MODULES_DETECTED",
+      "passed": true,
+      "detail": "['kp', 'western', 'vastu', 'palmistry', 'practice']"
+    },
+    {
+      "code": "FULL_SCOPE_BLOCKS_CURRENT_TAG",
+      "passed": true,
+      "detail": "current Coming Soon modules block tagged full-scope release"
+    },
+    {
+      "code": "MISSING_LOCK_BLOCKS_RELEASE",
+      "passed": true,
+      "detail": "--require-lock rejects absent lock"
+    },
+    {
+      "code": "TAG_MISMATCH_BLOCKED",
+      "passed": true,
+      "detail": "wrong tag is rejected"
+    },
+    {
+      "code": "RUNTIME_TREE_EQUIVALENT",
+      "passed": true,
+      "detail": "{'baselineRuntimeFileCount': 168, 'changedFiles': [], 'addedFiles': [], 'missingFiles': []}"
+    },
+    {
+      "code": "SIM_PLATFORM_PACKAGING",
+      "passed": true,
+      "detail": "Android and Windows simulated evidence packages succeed"
+    },
+    {
+      "code": "SIM_FINAL_ASSEMBLY",
+      "passed": true,
+      "detail": "matching platform evidence assembles"
+    },
+    {
+      "code": "SIM_FINAL_CONTRACT",
+      "passed": true,
+      "detail": "astro-logic-final-release-bundle-v1"
+    },
+    {
+      "code": "SIM_ARTIFACT_TAMPER_BLOCKED",
+      "passed": true,
+      "detail": "artifact SHA mismatch is rejected"
+    }
+  ],
+  "summary": {
+    "passed": 22,
+    "failed": 0
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "contract": "astro-logic-v073-runtime-tree-equivalence-v1",
+  "baselinePackage": "ASTRO_LOGIC_DEVELOPMENT_v072.zip",
+  "baselinePackageSha256": "e24fe3ce25bcfc342986800244fa0bd76dedb4052baeeb155778bb7a78e859ff",
+  "baselineRuntimeFileCount": 168,
+  "currentRuntimeFileCount": 168,
+  "baselineTreeSha256": "418d46126f416195ff25b0dc6911953407f8d6f2b4d67337f347d06d7627575b",
+  "currentTreeSha256": "418d46126f416195ff25b0dc6911953407f8d6f2b4d67337f347d06d7627575b",
+  "missingFiles": [],
+  "addedFiles": [],
+  "changedFiles": [],
+  "pubspecNonVersionContentIdentical": true,
+  "passed": true
+}

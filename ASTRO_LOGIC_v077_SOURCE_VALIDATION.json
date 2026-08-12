@@ -1,0 +1,292 @@
+{
+  "milestone": "v077",
+  "appVersion": "0.73.0+77",
+  "kpNativeEngine": "1.2.0",
+  "outputSchemaVersion": "kp-native-chart-v3",
+  "eventJudgmentSchema": "kp-event-judgment-v1",
+  "timingSchema": "kp-dasha-timing-v1",
+  "timingProfile": "kp-vimshottari-dba-house-coverage-v1",
+  "nativeAbi": "al-abi-7",
+  "dartFilesScanned": 169,
+  "checksPassed": 55,
+  "checksTotal": 55,
+  "failed": [],
+  "flutterRuntimeDisclaimer": "Flutter/Dart SDK unavailable; no analyzer/widget/APK/Windows Flutter build success claimed.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v077"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v077 first"
+    },
+    {
+      "code": "SQLITE_V11",
+      "passed": true,
+      "detail": "schema unchanged v11"
+    },
+    {
+      "code": "NATIVE_ABI_V7",
+      "passed": true,
+      "detail": "native ABI unchanged"
+    },
+    {
+      "code": "KP_ENGINE_1_2",
+      "passed": true,
+      "detail": "KP native engine 1.2.0"
+    },
+    {
+      "code": "KP_SCHEMA_V3",
+      "passed": true,
+      "detail": "KP output schema v3"
+    },
+    {
+      "code": "TIMING_ENGINE_1_0",
+      "passed": true,
+      "detail": "timing engine 1.0.0"
+    },
+    {
+      "code": "TIMING_SCHEMA_V1",
+      "passed": true,
+      "detail": "timing schema v1"
+    },
+    {
+      "code": "TIMING_PROFILE_V1",
+      "passed": true,
+      "detail": "timing profile frozen"
+    },
+    {
+      "code": "VIMSHOTTARI_REUSE",
+      "passed": true,
+      "detail": "governed calendar reused"
+    },
+    {
+      "code": "VIM_CALENDAR_V2",
+      "passed": true,
+      "detail": "shared calendar remains v2/120-year"
+    },
+    {
+      "code": "DBA_MAPPING",
+      "passed": true,
+      "detail": "MD/AD/PD mapped to DBA"
+    },
+    {
+      "code": "POST_BIRTH_CLAMP",
+      "passed": true,
+      "detail": "pre-birth timing excluded/clamped"
+    },
+    {
+      "code": "ALL_LORDS_CONDUCTIVE",
+      "passed": true,
+      "detail": "all three lords must touch conductive"
+    },
+    {
+      "code": "FULL_HOUSE_GROUP",
+      "passed": true,
+      "detail": "full conductive house-group required"
+    },
+    {
+      "code": "NO_DETRIMENT_FOR_SUPPORT",
+      "passed": true,
+      "detail": "supportive rejects detrimental hits"
+    },
+    {
+      "code": "CONFLICT_PRESERVED",
+      "passed": true,
+      "detail": "conflicting windows retained"
+    },
+    {
+      "code": "INSUFFICIENT_PRESERVED",
+      "passed": true,
+      "detail": "insufficient coverage retained"
+    },
+    {
+      "code": "PROMISE_GATE",
+      "passed": true,
+      "detail": "chart-promise gate separate"
+    },
+    {
+      "code": "DENIAL_NO_PROMOTION",
+      "passed": true,
+      "detail": "blocked gate promotes no next window"
+    },
+    {
+      "code": "LEVEL_EVIDENCE",
+      "passed": true,
+      "detail": "per-lord four-level evidence retained"
+    },
+    {
+      "code": "CURRENT_WINDOW",
+      "passed": true,
+      "detail": "current DBA preserved"
+    },
+    {
+      "code": "NEXT_WINDOWS",
+      "passed": true,
+      "detail": "next supportive review windows exposed"
+    },
+    {
+      "code": "TRANSIT_SEPARATE",
+      "passed": true,
+      "detail": "transit excluded"
+    },
+    {
+      "code": "RP_SEPARATE",
+      "passed": true,
+      "detail": "ruling planets excluded"
+    },
+    {
+      "code": "NO_REAL_WORLD_PREDICTION",
+      "passed": true,
+      "detail": "safety flags"
+    },
+    {
+      "code": "SUPPORTED_TOPICS_REUSED",
+      "passed": true,
+      "detail": "timing bound to supported event profile"
+    },
+    {
+      "code": "ORCH_TIMING",
+      "passed": true,
+      "detail": "consultation persists timing"
+    },
+    {
+      "code": "ORCH_MOON_KP",
+      "passed": true,
+      "detail": "KP-native Moon seeds calendar"
+    },
+    {
+      "code": "ORCH_UNSUPPORTED_NULL",
+      "passed": true,
+      "detail": "unsupported categories keep timing null"
+    },
+    {
+      "code": "CHART_PLACEHOLDER",
+      "passed": true,
+      "detail": "base chart schema reserves timing field"
+    },
+    {
+      "code": "WORKSPACE_TIMING",
+      "passed": true,
+      "detail": "workspace timing review"
+    },
+    {
+      "code": "SOURCE_DOC",
+      "passed": true,
+      "detail": "timing source governance documented"
+    },
+    {
+      "code": "STATUS_DOC",
+      "passed": true,
+      "detail": "status/next task"
+    },
+    {
+      "code": "BACKUP_APP_VERSION",
+      "passed": true,
+      "detail": "backup metadata current"
+    },
+    {
+      "code": "TEST_TIMING",
+      "passed": true,
+      "detail": "timing test source present"
+    },
+    {
+      "code": "TEST_SCHEMA_V3",
+      "passed": true,
+      "detail": "native test expects schema v3"
+    },
+    {
+      "code": "ANDROID_WIRING",
+      "passed": true,
+      "detail": "Android native build wiring retained"
+    },
+    {
+      "code": "WINDOWS_WIRING",
+      "passed": true,
+      "detail": "Windows native build wiring retained"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "EN/BN parity"
+    },
+    {
+      "code": "LOCALE_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate keys"
+    },
+    {
+      "code": "COPY_kpDashaTiming",
+      "passed": true,
+      "detail": "kpDashaTiming localized"
+    },
+    {
+      "code": "COPY_kpTimingGate",
+      "passed": true,
+      "detail": "kpTimingGate localized"
+    },
+    {
+      "code": "COPY_kpSupportiveWindows",
+      "passed": true,
+      "detail": "kpSupportiveWindows localized"
+    },
+    {
+      "code": "COPY_kpConflictingWindows",
+      "passed": true,
+      "detail": "kpConflictingWindows localized"
+    },
+    {
+      "code": "COPY_kpCurrentDba",
+      "passed": true,
+      "detail": "kpCurrentDba localized"
+    },
+    {
+      "code": "COPY_kpNextSupportiveWindows",
+      "passed": true,
+      "detail": "kpNextSupportiveWindows localized"
+    },
+    {
+      "code": "COPY_kpNoSupportiveTiming",
+      "passed": true,
+      "detail": "kpNoSupportiveTiming localized"
+    },
+    {
+      "code": "COPY_kpTimingSeparationNote",
+      "passed": true,
+      "detail": "kpTimingSeparationNote localized"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    },
+    {
+      "code": "DART_LEXICAL",
+      "passed": true,
+      "detail": "Dart lexical structure clean"
+    },
+    {
+      "code": "DART_FILE_COUNT",
+      "passed": true,
+      "detail": "169 Dart source/test/tool files scanned"
+    },
+    {
+      "code": "DBA_729_REFERENCE",
+      "passed": true,
+      "detail": "9\u00d79\u00d79 third-level combinations"
+    },
+    {
+      "code": "TIMING_STATE_REFERENCE",
+      "passed": true,
+      "detail": "conservative timing state simulation"
+    },
+    {
+      "code": "NATIVE_EXECUTION",
+      "passed": true,
+      "detail": "Sun      actual=352.3838892 lat=-0.0000213 jpl=352.3837496 error= 0.0001396\nMoon     actual=107.7246106 lat= 3.0789422 jpl=107.7249757 error= 0.0003651\nMars     actual=235.2511681 lat= 1.5329681 jpl=235.2504762 error= 0.0006919\nMercury  actual=356.2318337 lat=-1.1929160 jpl=356.2301156 error= 0.0017181\nJupiter  actual=279.5631474 lat= 0.2435759 jpl=279.5629920 error= 0.0001554\nVenus    actual=327.8467585 lat=-0.9841553 jpl=327.8470168 error= 0.0002583\nSaturn   actual=226.1324506 lat= 2.5282715 jpl=226.1325234 error= 0.0000728\nLahiri= 23.6212396 Asc=259.8330326 TrueNode= 70.1004066 (-0.054734/day) MeanNode= 70.7318634 (-0.052954/day) SunHA=12.43022h Tribhaga=night/2 [-0.269088285,0.233005742]d AstroDay=-0.766337898 Varsha=-333.653167663/-333.787781727 Masa=-28.631338443/-28.750657259\nKP classic ayanamsha= 23.5395078 Asc=259.8330326 MC=179.4110296 Placidus fixture=PASS\nPASS: native calculations and required shared ABI exports"
+    }
+  ]
+}

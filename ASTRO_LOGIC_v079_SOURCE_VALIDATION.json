@@ -1,0 +1,357 @@
+{
+  "milestone": "v079",
+  "appVersion": "0.75.0+79",
+  "databaseSchema": 12,
+  "horaryEngine": "1.0.0",
+  "inputSchema": "kp-horary-input-v1",
+  "outputSchema": "kp-horary-chart-v1",
+  "numberTableProfile": "kp-horary-249-table-v1",
+  "backupEngine": "1.4.0",
+  "dartFilesScanned": 174,
+  "checksPassed": 68,
+  "checksTotal": 68,
+  "failed": [],
+  "flutterRuntimeDisclaimer": "Flutter/Dart SDK unavailable; no analyzer/widget/APK/Windows Flutter build success claimed.",
+  "checks": [
+    {
+      "code": "VERSION",
+      "passed": true,
+      "detail": "pubspec v079"
+    },
+    {
+      "code": "CHANGELOG_TOP",
+      "passed": true,
+      "detail": "changelog v079 first"
+    },
+    {
+      "code": "DB_SCHEMA_12",
+      "passed": true,
+      "detail": "SQLite schema v12"
+    },
+    {
+      "code": "HORARY_ENGINE",
+      "passed": true,
+      "detail": "horary engine 1.0.0"
+    },
+    {
+      "code": "HORARY_CONTRACTS",
+      "passed": true,
+      "detail": "input/output/profile frozen"
+    },
+    {
+      "code": "TABLE_PROFILE",
+      "passed": true,
+      "detail": "1-249 table profile"
+    },
+    {
+      "code": "EXACT_ARCSECOND_MATH",
+      "passed": true,
+      "detail": "exact integer arcsecond construction"
+    },
+    {
+      "code": "TABLE_INVARIANT_249",
+      "passed": true,
+      "detail": "249 invariant"
+    },
+    {
+      "code": "NUMBER_RANGE",
+      "passed": true,
+      "detail": "1-249 enforced"
+    },
+    {
+      "code": "SEGMENT_START_ASC",
+      "passed": true,
+      "detail": "segment start sets Ascendant"
+    },
+    {
+      "code": "QUERY_PLANETS",
+      "passed": true,
+      "detail": "query moment drives planets"
+    },
+    {
+      "code": "NO_NATAL_INPUT",
+      "passed": true,
+      "detail": "Horary input excludes natal/client identity"
+    },
+    {
+      "code": "SINGLE_QUESTION",
+      "passed": true,
+      "detail": "single explicit question required"
+    },
+    {
+      "code": "COORD_LIMIT",
+      "passed": true,
+      "detail": "Placidus latitude safety"
+    },
+    {
+      "code": "PLACIDUS_SOLVER",
+      "passed": true,
+      "detail": "native cusp-1 solver present"
+    },
+    {
+      "code": "SOLVER_MAX_2_ARCSEC",
+      "passed": true,
+      "detail": "2 arcsec hard bind gate"
+    },
+    {
+      "code": "NO_ROTATED_CUSP_SHORTCUT",
+      "passed": true,
+      "detail": "no rotated-cusp shortcut"
+    },
+    {
+      "code": "TECH_TIME_NOT_EVENT",
+      "passed": true,
+      "detail": "solver timestamp not event time"
+    },
+    {
+      "code": "AUTO_TIMING_FALSE",
+      "passed": true,
+      "detail": "automatic Horary timing disabled"
+    },
+    {
+      "code": "REAL_WORLD_FALSE",
+      "passed": true,
+      "detail": "no real-world guarantee"
+    },
+    {
+      "code": "PRACTITIONER_REVIEW",
+      "passed": true,
+      "detail": "practitioner review required"
+    },
+    {
+      "code": "OPTIONAL_EVENT_TOPIC",
+      "passed": true,
+      "detail": "event judgment optional"
+    },
+    {
+      "code": "EVENT_REUSE_GOVERNED",
+      "passed": true,
+      "detail": "existing governed event engine reused"
+    },
+    {
+      "code": "HORARY_MODEL",
+      "passed": true,
+      "detail": "immutable snapshot model present"
+    },
+    {
+      "code": "DB_TABLE",
+      "passed": true,
+      "detail": "Horary table present"
+    },
+    {
+      "code": "DB_NUMBER_CHECK",
+      "passed": true,
+      "detail": "DB number constraint"
+    },
+    {
+      "code": "DB_IMMUTABLE",
+      "passed": true,
+      "detail": "UPDATE/DELETE blocked"
+    },
+    {
+      "code": "DB_MIGRATION",
+      "passed": true,
+      "detail": "schema migration installs table"
+    },
+    {
+      "code": "STORE_LOAD",
+      "passed": true,
+      "detail": "store loads Horary snapshots"
+    },
+    {
+      "code": "STORE_CREATE",
+      "passed": true,
+      "detail": "transactional Horary creation"
+    },
+    {
+      "code": "STORE_INPUT_HASH",
+      "passed": true,
+      "detail": "input/settings hash"
+    },
+    {
+      "code": "STORE_OUTPUT_HASH",
+      "passed": true,
+      "detail": "output hash"
+    },
+    {
+      "code": "STORE_AUDIT",
+      "passed": true,
+      "detail": "audit creation event"
+    },
+    {
+      "code": "BACKUP_1_4",
+      "passed": true,
+      "detail": "backup writer 1.4.0"
+    },
+    {
+      "code": "BACKUP_READERS",
+      "passed": true,
+      "detail": "reader compatibility 1.0-1.4"
+    },
+    {
+      "code": "BACKUP_SCHEMA_RANGE",
+      "passed": true,
+      "detail": "merge supports schemas 9-12"
+    },
+    {
+      "code": "BACKUP_HORARY_PROTECTED",
+      "passed": true,
+      "detail": "schema12 protected + legacy set retained"
+    },
+    {
+      "code": "BACKUP_SCHEMA_AWARE_SET",
+      "passed": true,
+      "detail": "schema-aware table set"
+    },
+    {
+      "code": "BACKUP_NORMALIZE_OLD",
+      "passed": true,
+      "detail": "older backups normalized with empty new table"
+    },
+    {
+      "code": "BACKUP_SOURCE_MANIFEST_SUBSET",
+      "passed": true,
+      "detail": "source manifest hashes original table set"
+    },
+    {
+      "code": "BACKUP_HORARY_HASH",
+      "passed": true,
+      "detail": "Horary hashes independently revalidated"
+    },
+    {
+      "code": "MERGE_AUDIT_REMAP",
+      "passed": true,
+      "detail": "imported Horary audit entity follows ID remap"
+    },
+    {
+      "code": "BACKUP_APP_VERSION",
+      "passed": true,
+      "detail": "backup metadata current"
+    },
+    {
+      "code": "WORKSPACE_CLIENTSTORE",
+      "passed": true,
+      "detail": "KP workspace has store"
+    },
+    {
+      "code": "WORKSPACE_HORARY_UI",
+      "passed": true,
+      "detail": "Horary workspace UI"
+    },
+    {
+      "code": "WORKSPACE_CAST_SAVE",
+      "passed": true,
+      "detail": "cast/save flow wired"
+    },
+    {
+      "code": "WORKSPACE_GENERAL_SAFE",
+      "passed": true,
+      "detail": "General Horary no invented auto judgment"
+    },
+    {
+      "code": "DASHBOARD_STORE_PASS",
+      "passed": true,
+      "detail": "dashboard passes store"
+    },
+    {
+      "code": "TEST_HORARY",
+      "passed": true,
+      "detail": "Horary tests present"
+    },
+    {
+      "code": "SOURCE_DOC",
+      "passed": true,
+      "detail": "source governance documented"
+    },
+    {
+      "code": "STATUS_DOC",
+      "passed": true,
+      "detail": "status + next task documented"
+    },
+    {
+      "code": "ANDROID_WIRING",
+      "passed": true,
+      "detail": "Android native wiring retained"
+    },
+    {
+      "code": "WINDOWS_WIRING",
+      "passed": true,
+      "detail": "Windows native wiring retained"
+    },
+    {
+      "code": "REFERENCE_249",
+      "passed": true,
+      "detail": "249 segments; #1/#22/#23/#249 reference rows"
+    },
+    {
+      "code": "REFERENCE_CONTIGUOUS",
+      "passed": true,
+      "detail": "0-360 continuity"
+    },
+    {
+      "code": "REFERENCE_SIGN_CONTAINED",
+      "passed": true,
+      "detail": "each number remains within one sign"
+    },
+    {
+      "code": "LOCALE_PARITY",
+      "passed": true,
+      "detail": "EN/BN parity"
+    },
+    {
+      "code": "LOCALE_DUPLICATES",
+      "passed": true,
+      "detail": "no duplicate localization keys"
+    },
+    {
+      "code": "COPY_kpHoraryTitle",
+      "passed": true,
+      "detail": "kpHoraryTitle localized"
+    },
+    {
+      "code": "COPY_kpHoraryNumber",
+      "passed": true,
+      "detail": "kpHoraryNumber localized"
+    },
+    {
+      "code": "COPY_kpHoraryQuestion",
+      "passed": true,
+      "detail": "kpHoraryQuestion localized"
+    },
+    {
+      "code": "COPY_kpHoraryCastSave",
+      "passed": true,
+      "detail": "kpHoraryCastSave localized"
+    },
+    {
+      "code": "COPY_kpHorarySafetyNote",
+      "passed": true,
+      "detail": "kpHorarySafetyNote localized"
+    },
+    {
+      "code": "COPY_kpHoraryFailed",
+      "passed": true,
+      "detail": "kpHoraryFailed localized"
+    },
+    {
+      "code": "RELATIVE_IMPORTS",
+      "passed": true,
+      "detail": "all relative imports resolve"
+    },
+    {
+      "code": "DART_LEXICAL",
+      "passed": true,
+      "detail": "Dart lexical structure clean"
+    },
+    {
+      "code": "DART_FILE_COUNT",
+      "passed": true,
+      "detail": "174 Dart source/test/tool files scanned"
+    },
+    {
+      "code": "NATIVE_EXECUTION",
+      "passed": true,
+      "detail": "Sun      actual=352.3838892 lat=-0.0000213 jpl=352.3837496 error= 0.0001396\nMoon     actual=107.7246106 lat= 3.0789422 jpl=107.7249757 error= 0.0003651\nMars     actual=235.2511681 lat= 1.5329681 jpl=235.2504762 error= 0.0006919\nMercury  actual=356.2318337 lat=-1.1929160 jpl=356.2301156 error= 0.0017181\nJupiter  actual=279.5631474 lat= 0.2435759 jpl=279.5629920 error= 0.0001554\nVenus    actual=327.8467585 lat=-0.9841553 jpl=327.8470168 error= 0.0002583\nSaturn   actual=226.1324506 lat= 2.5282715 jpl=226.1325234 error= 0.0000728\nLahiri= 23.6212396 Asc=259.8330326 TrueNode= 70.1004066 (-0.054734/day) MeanNode= 70.7318634 (-0.052954/day) SunHA=12.43022h Tribhaga=night/2 [-0.269088285,0.233005742]d AstroDay=-0.766337898 Varsha=-333.653167663/-333.787781727 Masa=-28.631338443/-28.750657259\nKP classic ayanamsha= 23.5395078 Asc=259.8330326 MC=179.4110296 Placidus fixture=PASS\nPASS: native calculations and required shared ABI exports"
+    }
+  ]
+}

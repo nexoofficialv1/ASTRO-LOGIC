@@ -1,0 +1,33 @@
+{
+  "fixtureVersion": "kp-native-reference-v1",
+  "purpose": "Development-only numeric oracle; no Swiss Ephemeris code or runtime dependency is bundled.",
+  "externalOracle": {
+    "software": "Swiss Ephemeris 2.10.03",
+    "siderealMode": "SE_SIDM_KRISHNAMURTI",
+    "houseSystem": "Placidus (P)"
+  },
+  "input": {
+    "utc": "1984-03-12T18:42:00Z",
+    "latitude": 23.22,
+    "longitude": 88.37
+  },
+  "krishnamurtiAyanamshaDegrees": 23.53950781182664,
+  "tropicalCuspsDegrees": [
+    259.8330156158061,
+    291.1655570892044,
+    325.2763143732573,
+    359.4110085198155,
+    29.8853508434646,
+    56.0324815010135,
+    79.8330156158061,
+    111.1655570892044,
+    145.2763143732573,
+    179.4110085198155,
+    209.8853508434646,
+    236.0324815010135
+  ],
+  "toleranceDegrees": {
+    "ayanamsha": 0.000001,
+    "cusp": 0.0001
+  }
+}

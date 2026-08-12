@@ -1,0 +1,23 @@
+{
+  "fixtureVersion": "western-modern-reference-v1",
+  "referenceTimestampUtc": "2026-08-12T17:19:00Z",
+  "coordinateContract": "geocentric tropical ecliptic longitude; independent public ephemeris spot-check; tolerance is deliberately wider than internal engine precision because the published reference is rounded",
+  "toleranceDegrees": 0.02,
+  "sources": [
+    {
+      "publisher": "Astrodienst / Swiss Ephemeris public current-planet listing",
+      "purpose": "independent rounded tropical longitude spot-check",
+      "url": "https://www.astro.com/"
+    },
+    {
+      "publisher": "NASA/JPL Horizons",
+      "purpose": "authoritative ephemeris provenance and future fixture refresh path",
+      "url": "https://ssd-api.jpl.nasa.gov/doc/horizons.html"
+    }
+  ],
+  "fixtures": [
+    {"bodyCode": 7, "body": "Uranus", "expectedLongitudeDegrees": 65.3422222222},
+    {"bodyCode": 8, "body": "Neptune", "expectedLongitudeDegrees": 4.0791666667},
+    {"bodyCode": 9, "body": "Pluto", "expectedLongitudeDegrees": 303.9066666667}
+  ]
+}

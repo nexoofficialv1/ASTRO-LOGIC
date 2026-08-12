@@ -1,0 +1,34 @@
+ASTRO LOGIC v082 — GitHub-এ প্রথম push (Existing empty repo)
+============================================================
+
+Repository: nexoofficialv1/ASTRO-LOGIC
+
+Termux-এ চালান:
+
+pkg update -y
+pkg install -y git gh unzip python
+termux-setup-storage
+
+gh auth status
+
+rm -rf ~/ASTRO_LOGIC
+mkdir -p ~/ASTRO_LOGIC
+unzip -o /sdcard/Download/ASTRO_LOGIC_DEVELOPMENT_v082_GITHUB_PUSH_READY.zip -d ~/ASTRO_LOGIC
+cd ~/ASTRO_LOGIC
+
+chmod +x TERMUX_PUSH_EXISTING_REPO.sh
+bash TERMUX_PUSH_EXISTING_REPO.sh ASTRO-LOGIC
+
+Push সফল হলে Android GitHub Actions workflow নিজে থেকে শুরু হবে।
+Status দেখতে:
+
+gh run list --repo nexoofficialv1/ASTRO-LOGIC --workflow android-apk.yml --limit 5
+
+তারপর ChatGPT-এ শুধু লিখুন: push হয়েছে
+আমি GitHub plugin দিয়ে workflow status/logs দেখে পরের কাজ করব।
+
+নিরাপত্তা:
+- Script force-push করে না।
+- Remote repo empty না হলে script নিজে থেকে থেমে যাবে।
+- pubspec.lock package-এ নেই; CI প্রথম tested candidate generate করবে।
+- main push-এ Windows build চালু হবে না।

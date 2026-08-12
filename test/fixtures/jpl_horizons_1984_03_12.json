@@ -1,0 +1,19 @@
+{
+  "source": "NASA/JPL Horizons API",
+  "sourceVersion": "1.2",
+  "ephemeris": "DE441",
+  "center": "Earth (399), geocentric",
+  "frame": "observer-centered IAU76/80 apparent ecliptic-of-date",
+  "utcDateTime": "1984-03-12T18:42:00Z",
+  "quantity": "31",
+  "tropicalLongitudes": {
+    "sun": 352.3837496,
+    "moon": 107.7249757,
+    "mars": 235.2504762,
+    "mercury": 356.2301156,
+    "jupiter": 279.5629920,
+    "venus": 327.8470168,
+    "saturn": 226.1325234
+  },
+  "maximumErrorDegrees": 0.01
+}

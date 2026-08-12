@@ -1,0 +1,9 @@
+{
+  "contract": "astro-logic-v072-core-maintainability-validation-v1",
+  "checks": 124,
+  "passed": 124,
+  "failed": 0,
+  "dartFilesScanned": 155,
+  "maxDartLines": 1280,
+  "failures": []
+}

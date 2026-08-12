@@ -1,0 +1,861 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v070 Governed Backup Merge/Migration Adapter v1",
+  "appVersion": "0.66.0+70",
+  "databaseSchemaVersion": 10,
+  "backupEngineVersion": "1.2.0",
+  "mergeContract": "astro-logic-governed-backup-merge-v1",
+  "validationBoundary": "Static source/readiness checks plus independent Python reference simulations; not Flutter/Dart runtime execution.",
+  "generatedAtUtc": "2026-08-10T11:07:58.557945+00:00",
+  "dartFilesScanned": 143,
+  "passed": 165,
+  "failed": 4,
+  "result": "FAIL",
+  "checks": [
+    {
+      "name": "pubspec version 0.66.0+70",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "name": "changelog has v070 version",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "database schema v10",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "name": "backup engine 1.2.0",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "name": "reader keeps v068",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reader keeps v069",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reader supports v070",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge contract v1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge source schema 9 supported",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge source schema 10 supported",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup envelope contract unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup payload contract unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "new backup advertises governed merge mode",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "new backup merge enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "new backup deterministic remap enabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "old empty-workspace policy reader retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares kundli_analysis_snapshots.source_calculation_output_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares numerology_snapshots.source_consultation_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares numerology_snapshots.source_client_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares numerology_snapshots.source_birth_record_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares professional_report_snapshots.source_report_snapshot_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares professional_report_snapshots.source_consultation_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares professional_report_approvals.source_report_snapshot_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "schema declares professional_report_approvals.source_consultation_id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "v9 to v10 migration hook",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "migration helper exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "migration checks column before alter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "migration uses nullable add column",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Kundli source output id model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Kundli integrity output getter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model sourceConsultationId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model sourceClientId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model sourceBirthRecordId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model integrityConsultationId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model integrityClientId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology model integrityBirthRecordId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report model sourceReportSnapshotId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report model sourceConsultationId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report model integrityReportSnapshotId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report model integrityConsultationId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Approval model sourceReportSnapshotId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Approval model sourceConsultationId",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval payload uses integrity report id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval payload uses integrity consultation id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR payload uses report integrity id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR payload uses consultation integrity id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR verifies approval/report integrity ids agree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verifier searches source report identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verifier searches source consultation identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verifier still binds report hash",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verifier approval checks source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge eligibility enum exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "preview canMergeNow getter exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canMerge requires verified manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canMerge requires snapshot integrity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canMerge requires zero preview mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge result records remapped rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge result records rollback policy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge service method exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "client store exposes merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge re-authenticates encrypted bytes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge blocks unsupported source schema",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge blocks duplicate manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge blocks semantic conflict plan",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge is one database transaction",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge inserts only planned rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge performs foreign key check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge performs post insert governed hash check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge audit action appended",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge audit says all-or-nothing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge audit says source integrity preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge result reports all-or-nothing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "active settings not inserted in restore order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "active settings explicit no-overwrite note",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "incoming rows sorted by source id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate incoming primary keys rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "allocator includes local and source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "allocator advances above max range",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "same-id equivalent reused",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "same-id different remapped",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "free source id preserved",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical comparison removes local id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical comparison ignores source integrity columns",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "integrity source ids attached after remap",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Kundli source hash id attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology source consultation attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology source client attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology source birth attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report source report id attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval source identity attached",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "natural collision function signature valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "natural collision duplicate parameter absent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology natural identity guarded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Report natural identity guarded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Approval natural identity guarded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "natural identity mismatch becomes blocking",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers birth_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers calculation_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers consultations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers calculation_output_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers gemstone_remedies",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers kundli_analysis_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers numerology_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers professional_report_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "FK remap graph covers professional_report_approvals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unmapped parent ids reject merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "client audit entity id remapped",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit provenance flags imported row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit provenance stores manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit provenance stores source audit id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit provenance stores original entity id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "audit provenance retains original summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate manifest lookup uses merge audit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Kundli validation uses source calculation id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology validation uses source consultation id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology validation uses source client id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology validation uses source birth id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval validation uses source report id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval validation uses source consultation id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval still checks local report FK relation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "preview screen offers merge button",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge requires confirmation dialog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge re-prompts for password",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "preview bytes cleared after merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "merge result card exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "preview UI shows remapped ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "localization key previewMergeEligible bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergePreviewedBackup bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeConfirmTitle bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeConfirmMessage bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeCompleted bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeFailed bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeInsertedRows bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeEquivalentSkipped bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeRemappedRows bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "localization key mergeRollbackPolicy bilingual",
+      "passed": true,
+      "detail": "occurrences=2"
+    },
+    {
+      "name": "merge identity test exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test covers Kundli source id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test covers Numerology source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test covers report source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test covers approval payload source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "test covers QR payload source ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup tests expect engine 1.2.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup tests expect schema 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup tests expose governed merge eligibility",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status file version current",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status file schema current",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status file merge contract current",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status file next milestone locked",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc PRODUCT_SPEC.md current merge state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc BACKUP_SECURITY.md current merge state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc DATABASE.md current merge state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "doc README.md current merge state",
+      "passed": false,
+      "detail": ""
+    },
+    {
+      "name": "product spec no longer says merge disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all relative Dart imports resolve",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dart lexical structure scan clean",
+      "passed": true,
+      "detail": "files=143 errors=[]"
+    },
+    {
+      "name": "static build-readiness audit zero errors",
+      "passed": true,
+      "detail": "errorsFailed=0"
+    },
+    {
+      "name": "reference remap preserves free id",
+      "passed": true,
+      "detail": "{1: 8, 3: 3, 7: 7}"
+    },
+    {
+      "name": "reference remap reuses equivalent id",
+      "passed": true,
+      "detail": "{1: 8, 3: 3, 7: 7}"
+    },
+    {
+      "name": "reference remap moves conflicting id above union max",
+      "passed": true,
+      "detail": "{1: 8, 3: 3, 7: 7}"
+    },
+    {
+      "name": "reference remap deterministic insertion order",
+      "passed": true,
+      "detail": "[{'id': 8, 'name': 'SOURCE-A'}, {'id': 3, 'name': 'SOURCE-C'}]"
+    },
+    {
+      "name": "reference child FK follows remapped parent",
+      "passed": true,
+      "detail": "{'id': 2, 'parent_id': 8, 'source_parent_id': 1}"
+    },
+    {
+      "name": "reference child source identity preserved",
+      "passed": true,
+      "detail": "{'id': 2, 'parent_id': 8, 'source_parent_id': 1}"
+    },
+    {
+      "name": "reference semantic equivalent can reuse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference semantic different content blocks",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SQLite simulation local approval FK remains valid",
+      "passed": true,
+      "detail": "(43, 5, 43, 5)"
+    },
+    {
+      "name": "SQLite simulation signed source report id preserved",
+      "passed": true,
+      "detail": "(43, 5, 43, 5)"
+    },
+    {
+      "name": "SQLite simulation foreign keys clean",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "validator records Flutter SDK absence/presence",
+      "passed": true,
+      "detail": "flutter=unavailable dart=unavailable"
+    }
+  ]
+}

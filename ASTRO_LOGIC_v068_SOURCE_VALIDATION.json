@@ -1,0 +1,729 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v068 Encrypted Backup & Restore v1",
+  "appVersion": "0.64.0+68",
+  "feature": "Encrypted Backup & Restore v1",
+  "validationKind": "source-contract-static-readiness-plus-reference-crypto-simulation",
+  "flutterSdkAvailable": false,
+  "dartSdkAvailable": false,
+  "compileOrFlutterTestClaimed": false,
+  "dartFilesScanned": 140,
+  "result": "PASS",
+  "passed": 124,
+  "total": 124,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "pubspec version 0.64.0+68",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "changelog top 0.64.0+68",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cryptography dependency 2.9.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "file_picker dependency 11.0.3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SQLite remains schema v9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup model exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup service exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup UI exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup contract v1 frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "payload contract v1 frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup engine version 1.0.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "portable extension albackup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "128 MiB portable backup limit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF Argon2id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF memory 19456 KiB",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF parallelism 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF iterations 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF key length 32",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF salt length 16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF uses password derivation API",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AES-256-GCM selected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fresh cipher nonce explicitly generated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "salt uses Random.secure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AES-GCM AAD supplied on encrypt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AES-GCM AAD supplied on decrypt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "plaintext header marks AAD authentication",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "secret key destroyed after encryption/decryption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "secret box concatenation used",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "secret box reconstruction used",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wrong password/MAC error explicitly handled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "password minimum 12 characters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "password is declared not stored",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup file size checked before restore",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: clients",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: birth_records",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: astrology_settings",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: audit_events",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: calculation_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: consultations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: calculation_output_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: gemstone_remedies",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: kundli_analysis_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: numerology_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: professional_report_snapshots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "protected table included: professional_report_approvals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all protected tables counted by manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "per-table SHA-256 manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "overall SHA-256 manifest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonicalization version frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "canonical JSON sorts map keys",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "foreign keys checked before backup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "foreign keys checked after restore insertion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "calculation input hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "calculation output hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Kundli analysis hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Numerology hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "professional report hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "professional approval hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed report hashes recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval remains bound to report id/hash/consultation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "current approval statement contract required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "manifest verified before restore mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "immutable hashes verified before restore mutation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore mode emptyWorkspaceOnly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore merge disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore overwrite disabled",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "empty-workspace guard checks sensitive tables",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore preserves original rows/ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "settings restored into singleton row",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore is transactional",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-insert exact manifest recheck",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup creation audit appended after file write",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore audit appended after exact manifest recheck",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "header contract/version/schema validated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "header timestamp validated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "header/payload timestamp consistency required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KDF parameters validated before decryption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "cipher parameters validated before decryption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "payload engine/schema contract validated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ClientStore create backup API wired",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "ClientStore restore API wired",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reload()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadSettings()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadSnapshots()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadConsultations()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadOutputs()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadGemstoneRemedies()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadKundliAnalyses()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadNumerologySnapshots()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadProfessionalReports()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "post-restore reload wired: reloadProfessionalReportApprovals()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Settings links backup/restore screen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "create flow requires password confirmation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore flow requires explicit confirm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "native file picker limited to albackup",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup share uses generated local file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "restore reads selected backup bytes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UI surfaces manifest hash after create",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UI surfaces manifest hash after restore",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "English backup UI copy present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup size warning localized in EN+BN",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "backup contract unit test exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unit test freezes KDF/cipher constants",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unit test freezes schema v9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unit test freezes size limit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unit test enumerates protected tables",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documentation updated: V068_ENCRYPTED_BACKUP_RESTORE_STATUS.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documentation updated: BACKUP_SECURITY.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documentation updated: DATABASE.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documentation updated: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documentation updated: PRODUCT_SPEC.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "security doc records AAD",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "status locks next preview/migration milestone",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "product spec does not claim preview complete",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "third-party notices include cryptography/file_picker",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all relative Dart imports resolve",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dart lexical delimiters/strings balanced",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference Argon2id/AES-GCM round-trip",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference wrong-password rejection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference ciphertext tamper rejection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference AAD metadata tamper rejection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference canonical hash stable across map order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reference canonical hash detects content change",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "static build readiness has zero errors",
+      "passed": true,
+      "detail": "{\"appVersion\": \"0.64.0+68\", \"auditVersion\": \"build-readiness-audit-v1\", \"findings\": [{\"code\": \"REQUIRED_BUILD_FILES\", \"detail\": \"All required build/bootstrap files are present.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"VERSION_ALIGNMENT\", \"detail\": \"pubspec=0.64.0+68, changelog=0.64.0+68\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"CI_FLUTTER_PIN\", \"detail\": \"Android and Windows CI must both pin Flutter 3.44.9.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"CI_ANALYZE_TEST_GATES\", \"detail\": \"Both platform workflows include analyzer and test gates.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"GENERATED_RUNNERS_NOT_COMMITTED\", \"detail\": \"Platform runners remain generated-at-build-time.\", \"passed\": true, \"severity\": \"warning\"}, {\"code\": \"NO_BUNDLED_FONTS\", \"detail\": \"No font binaries are bundled.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"NO_UNRESOLVED_MARKERS\", \"detail\": \"No TODO/FIXME/HACK/XXX markers found.\", \"passed\": true, \"severity\": \"warning\"}, {\"code\": \"RELATIVE_IMPORTS\", \"detail\": \"All relative Dart imports resolve to local files.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"LARGE_DART_FILES\", \"detail\": \"Large-file watchlist: lib/src/vedic/vedic_lagna_judgment_engine.dart=2921, lib/src/vedic/vedic_shadbala_engine.dart=1842, lib/src/screens/consultation_detail_screen.dart=1426, lib/src/services/kundli_judgment_policy.dart=1280, lib/src/models/kundli_analysis.dart=1280, lib/src/data/client_store.dart=1098, lib/src/vedic/vedic_advanced_yoga_dosha_engine.dart=1027\", \"passed\": false, \"severity\": \"warning\"}, {\"code\": \"PUBSPEC_LOCK_RELEASE_GATE\", \"detail\": \"pubspec.lock is not present; generate and retain it at the final Flutter build checkpoint for reproducible resolution.\", \"passed\": false, \"severity\": \"warning\"}, {\"code\": \"DASHBOARD_PLACEHOLDER_GOVERNANCE\", \"detail\": \"Unimplemented dashboard modules are explicitly marked Coming Soon.\", \"passed\": true, \"severity\": \"error\"}, {\"code\": \"NEW_CONSULTATION_CONTROL\", \"detail\": \"Dashboard New Consultation control routes into the client/consultation workflow.\", \"passed\": true, \"severity\": \"error\"}], \"scope\": \"source-only; does not claim Flutter runtime compilation\", \"summary\": {\"errorsFailed\": 0, \"passed\": 10, \"warningsFailed\": 2}}"
+    }
+  ],
+  "referenceCryptographicSimulation": {
+    "available": true,
+    "roundTrip": true,
+    "wrongPasswordRejected": true,
+    "ciphertextTamperRejected": true,
+    "aadTamperRejected": true,
+    "note": "Python reference simulation only; not Flutter/Dart runtime execution."
+  },
+  "staticBuildReadiness": {
+    "auditVersion": "build-readiness-audit-v1",
+    "appVersion": "0.64.0+68",
+    "scope": "source-only; does not claim Flutter runtime compilation",
+    "findings": [
+      {
+        "code": "REQUIRED_BUILD_FILES",
+        "severity": "error",
+        "passed": true,
+        "detail": "All required build/bootstrap files are present."
+      },
+      {
+        "code": "VERSION_ALIGNMENT",
+        "severity": "error",
+        "passed": true,
+        "detail": "pubspec=0.64.0+68, changelog=0.64.0+68"
+      },
+      {
+        "code": "CI_FLUTTER_PIN",
+        "severity": "error",
+        "passed": true,
+        "detail": "Android and Windows CI must both pin Flutter 3.44.9."
+      },
+      {
+        "code": "CI_ANALYZE_TEST_GATES",
+        "severity": "error",
+        "passed": true,
+        "detail": "Both platform workflows include analyzer and test gates."
+      },
+      {
+        "code": "GENERATED_RUNNERS_NOT_COMMITTED",
+        "severity": "warning",
+        "passed": true,
+        "detail": "Platform runners remain generated-at-build-time."
+      },
+      {
+        "code": "NO_BUNDLED_FONTS",
+        "severity": "error",
+        "passed": true,
+        "detail": "No font binaries are bundled."
+      },
+      {
+        "code": "NO_UNRESOLVED_MARKERS",
+        "severity": "warning",
+        "passed": true,
+        "detail": "No TODO/FIXME/HACK/XXX markers found."
+      },
+      {
+        "code": "RELATIVE_IMPORTS",
+        "severity": "error",
+        "passed": true,
+        "detail": "All relative Dart imports resolve to local files."
+      },
+      {
+        "code": "LARGE_DART_FILES",
+        "severity": "warning",
+        "passed": false,
+        "detail": "Large-file watchlist: lib/src/vedic/vedic_lagna_judgment_engine.dart=2921, lib/src/vedic/vedic_shadbala_engine.dart=1842, lib/src/screens/consultation_detail_screen.dart=1426, lib/src/services/kundli_judgment_policy.dart=1280, lib/src/models/kundli_analysis.dart=1280, lib/src/data/client_store.dart=1098, lib/src/vedic/vedic_advanced_yoga_dosha_engine.dart=1027"
+      },
+      {
+        "code": "PUBSPEC_LOCK_RELEASE_GATE",
+        "severity": "warning",
+        "passed": false,
+        "detail": "pubspec.lock is not present; generate and retain it at the final Flutter build checkpoint for reproducible resolution."
+      },
+      {
+        "code": "DASHBOARD_PLACEHOLDER_GOVERNANCE",
+        "severity": "error",
+        "passed": true,
+        "detail": "Unimplemented dashboard modules are explicitly marked Coming Soon."
+      },
+      {
+        "code": "NEW_CONSULTATION_CONTROL",
+        "severity": "error",
+        "passed": true,
+        "detail": "Dashboard New Consultation control routes into the client/consultation workflow."
+      }
+    ],
+    "summary": {
+      "errorsFailed": 0,
+      "warningsFailed": 2,
+      "passed": 10
+    }
+  }
+}

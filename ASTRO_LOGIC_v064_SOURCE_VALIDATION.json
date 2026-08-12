@@ -1,0 +1,162 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v0.60.0+64 / development package v064",
+  "scope": "source-only validation; Flutter/Dart SDK unavailable in this container",
+  "checks": [
+    {
+      "name": "pubspec_version_0_60_0_64",
+      "passed": true
+    },
+    {
+      "name": "changelog_top_0_60_0_64",
+      "passed": true
+    },
+    {
+      "name": "numerology_calculation_engine_2_0_0",
+      "passed": true
+    },
+    {
+      "name": "numerology_profile_schema_v2",
+      "passed": true
+    },
+    {
+      "name": "separate_frozen_calculation_profile",
+      "passed": true
+    },
+    {
+      "name": "life_path_component_reduction_v2",
+      "passed": true
+    },
+    {
+      "name": "personal_year_calendar_cycle_v2",
+      "passed": true
+    },
+    {
+      "name": "maturity_synthesis",
+      "passed": true
+    },
+    {
+      "name": "zero_vowel_handling",
+      "passed": true
+    },
+    {
+      "name": "numerology_judgment_2_0_0",
+      "passed": true
+    },
+    {
+      "name": "numerology_analysis_schema_v2",
+      "passed": true
+    },
+    {
+      "name": "eight_core_interpretation_contract",
+      "passed": true
+    },
+    {
+      "name": "three_year_timing_contract",
+      "passed": true
+    },
+    {
+      "name": "low_prediction_confidence_policy",
+      "passed": true
+    },
+    {
+      "name": "vedic_crosscheck_file",
+      "passed": true
+    },
+    {
+      "name": "vedic_crosscheck_mapping",
+      "passed": true
+    },
+    {
+      "name": "vedic_crosscheck_low_only",
+      "passed": true
+    },
+    {
+      "name": "vedic_crosscheck_no_confidence_uplift",
+      "passed": true
+    },
+    {
+      "name": "node_strengthening_gate",
+      "passed": true
+    },
+    {
+      "name": "numerology_remedy_behavioral_only",
+      "passed": true
+    },
+    {
+      "name": "orchestrator_uses_same_consultation_vedic_snapshot",
+      "passed": true
+    },
+    {
+      "name": "workspace_renders_maturity_confidence_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "professional_report_engine_1_3_0",
+      "passed": true
+    },
+    {
+      "name": "report_renders_numerology_v2_context",
+      "passed": true
+    },
+    {
+      "name": "v063_missing_comma_regression_fixed",
+      "passed": true
+    },
+    {
+      "name": "rule_sources_record_school_disagreement",
+      "passed": true
+    },
+    {
+      "name": "tests_cover_component_master",
+      "passed": true
+    },
+    {
+      "name": "tests_cover_personal_year_master",
+      "passed": true
+    },
+    {
+      "name": "tests_cover_vedic_crosscheck",
+      "passed": true
+    },
+    {
+      "name": "tests_cover_zero_vowel",
+      "passed": true
+    },
+    {
+      "name": "all_relative_dart_imports_resolve",
+      "passed": true,
+      "detail": "0 missing"
+    },
+    {
+      "name": "all_dart_delimiters_balanced",
+      "passed": true,
+      "detail": "126 Dart files scanned; 0 issues"
+    },
+    {
+      "name": "no_stale_current_v063_numerology_refs",
+      "passed": true,
+      "detail": "0 unexpected stale refs"
+    },
+    {
+      "name": "build_readiness_zero_errors",
+      "passed": true,
+      "detail": "errors=0, warnings=2"
+    }
+  ],
+  "dartFilesScanned": 126,
+  "dartStructuralIssues": [],
+  "missingRelativeImports": [],
+  "staleReferenceIssues": [],
+  "result": "PASS",
+  "knownBuildReadinessWarnings": [
+    "large Dart file maintainability watchlist",
+    "pubspec.lock deferred to final Flutter build checkpoint"
+  ],
+  "runtimeBuildClaims": {
+    "flutterAnalyze": false,
+    "flutterTest": false,
+    "androidApkBuilt": false,
+    "windowsBuildBuilt": false
+  }
+}

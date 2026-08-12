@@ -1,0 +1,377 @@
+{
+  "project": "ASTRO LOGIC",
+  "milestone": "v067 Signed Report Verification & QR Engine v1",
+  "appVersion": "0.63.0+67",
+  "scope": "source-only static validation; no Flutter/Dart runtime execution claimed",
+  "dartFilesScanned": 136,
+  "result": "PASS",
+  "passed": 73,
+  "total": 73,
+  "checks": [
+    {
+      "name": "pubspec version 0.63.0+67",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "changelog top 0.63.0+67",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "qr dependency pinned compatible to 4.0.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SQLite remains schema v9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification model exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification contract v1 frozen",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification status verifiedAgainstLocalRecord",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification status validPayloadNoLocalRecord",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification status mismatchDetected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification status invalidPayload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compact payload uses contract/id/hash fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification payload strict lowercase SHA-256",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification payload positive ids",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR payload excludes client name",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR payload excludes birth data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR payload excludes report narrative",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification service engine 1.0.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "payload self-binding signed hash recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no-local state explicitly avoids verified status",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "local report hash recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stored approval policy validated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "local approval hash recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "local signed-report hash recomputed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verified result only after local immutable evidence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR PNG encoder uses qr public API",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR encoder uses medium ECC",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR PNG signature emitted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR PNG uses zlib compression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR PNG writes CRC32",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Flutter QR view uses same qr public API",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR painter repaint binds payload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "offline verification screen exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification screen uses local store reports",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification screen supports paste",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification screen renders QR result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dashboard exposes verifier entry",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed report preview exposes QR card",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed report preview copies payload",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "signed report preview opens prefilled verifier",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PDF signed export renders QR",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PDF signed export includes verification disclosure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX signed export embeds local QR PNG",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX QR image relationship present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX PNG content type present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX drawing namespaces present",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export engine 1.2.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "export contract v3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all new localization keys present in EN+BN exactly once",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "verification regression tests exist",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification test covers local success",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification test covers no-local truthfulness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification test covers payload hash tamper",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification test covers persisted report content tamper",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification test covers QR privacy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "QR PNG regression test exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX signed QR packaging test exists",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOCX test defines archive names before signed QR assertion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "PDF signed build regression exercises approval path",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval statement contract remains v1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "approval table remains immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "v067 status file records DB unchanged",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "report export docs describe four outcomes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "product spec marks report export v3 completed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "README current milestone v0.63.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "third-party notice records qr 4.0.0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no camera scanner dependency",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification implementation has no HTTP client/network import",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "verification implementation has no client PII lookup fields",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all relative Dart imports resolve",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "Dart lexical delimiters/strings/comments balanced",
+      "passed": true,
+      "detail": "[]"
+    },
+    {
+      "name": "build-readiness errors = 0",
+      "passed": true,
+      "detail": "{'errorsFailed': 0, 'warningsFailed': 2, 'passed': 10}"
+    },
+    {
+      "name": "known build-readiness warnings = 2",
+      "passed": true,
+      "detail": "{'errorsFailed': 0, 'warningsFailed': 2, 'passed': 10}"
+    },
+    {
+      "name": "active milestone docs have no stale export-v2 marker",
+      "passed": true,
+      "detail": "[]"
+    }
+  ]
+}

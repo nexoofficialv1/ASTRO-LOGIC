@@ -1,0 +1,53 @@
+{
+  "gateVersion": "v082-release-source-prep-gate-v1",
+  "milestone": "v082",
+  "appVersion": "0.78.0+82",
+  "databaseSchema": 12,
+  "nativeAbi": "al-abi-9",
+  "westernOutputSchema": "western-natal-chart-v2",
+  "sourceValidation": {
+    "status": "PASS",
+    "checksPassed": 48,
+    "checksTotal": 48,
+    "dartFilesScanned": 183
+  },
+  "nativeRegression": {
+    "status": "PASS",
+    "modernPlanetFixtures": "PASS",
+    "aspectBoundaryFixtures": "PASS",
+    "aspectPatternFixtures": "PASS",
+    "kpPlacidusRegression": "PASS"
+  },
+  "staticBuildReadiness": {
+    "status": "PASS_WITH_EXPECTED_LOCK_WARNING",
+    "errorFailures": 0,
+    "warningFailures": 1,
+    "pubspecLockPresent": false
+  },
+  "protectedRegressionBaseline": {
+    "status": "PASS",
+    "exactV081FilesCompared": 58,
+    "changedFiles": [],
+    "coverage": "Vedic, KP Horary, Numerology, professional report/signing/QR, encrypted backup/restore/merge source files"
+  },
+  "sdkRuntime": {
+    "flutterAvailable": false,
+    "dartAvailable": false,
+    "flutterAnalyze": "NOT_RUN",
+    "flutterTest": "NOT_RUN",
+    "apkBuild": "NOT_RUN",
+    "windowsBuild": "NOT_RUN",
+    "reason": "Flutter/Dart SDK unavailable in the local validation environment."
+  },
+  "releaseGovernance": {
+    "githubPush": "NOT_RUN_BY_REQUEST",
+    "finalTestedPubspecLock": "PENDING_FINAL_FLUTTER_CHECKPOINT",
+    "westernDashboard": "AVAILABLE",
+    "vastu": "COMING_SOON",
+    "palmistry": "COMING_SOON",
+    "practice": "COMING_SOON",
+    "fullCommercialScope": "BLOCKED"
+  },
+  "releaseSourcePrepGate": "PASS",
+  "finalConsolidatedRuntimeReleaseGate": "BLOCKED_PENDING_FLUTTER_RUNTIME_VALIDATION_AND_TESTED_LOCK"
+}

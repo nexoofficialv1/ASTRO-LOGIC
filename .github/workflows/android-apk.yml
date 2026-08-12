@@ -1,0 +1,141 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Source-only readiness audit
+        run: python3 tool/static_build_readiness_audit.py
+
+      - name: Validate v082 Western modern expansion
+        run: python3 tool/validate_v082_western_modern.py
+
+      - name: Verify final release source contract on tags
+        if: github.ref_type == 'tag'
+        run: >-
+          python3 tool/final_release_gate.py
+          --require-lock
+          --require-full-scope
+          --tag "${GITHUB_REF_NAME}"
+          --json build/release/android/PREBUILD_RELEASE_GATE.json
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.44.7"
+          channel: stable
+          cache: true
+
+      - name: Generate governed Android runner
+        run: dart run tool/bootstrap_android_runner.dart
+
+      - name: Resolve packages
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${GITHUB_REF_TYPE}" == "tag" || -f pubspec.lock ]]; then
+            flutter pub get --enforce-lockfile
+          else
+            flutter pub get
+          fi
+
+      - name: Capture dependency graph
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p build/release/android
+          flutter pub deps --style=compact > build/release/android/DEPENDENCY_GRAPH.txt
+          cp pubspec.lock build/release/android/pubspec.lock
+
+      - name: Analyze source
+        shell: bash
+        run: |
+          set -o pipefail
+          flutter analyze --no-fatal-infos 2>&1 | tee build/release/android/flutter_analyze.log
+
+      - name: Run Flutter tests
+        shell: bash
+        run: |
+          set -o pipefail
+          flutter test 2>&1 | tee build/release/android/flutter_test.log
+
+      - name: Verify native astronomical core
+        shell: bash
+        run: |
+          set -o pipefail
+          ./tool/verify_native_packaging.sh 2>&1 | tee build/release/android/native_verification.log
+
+      - name: Build Android release APK
+        run: >-
+          flutter build apk --release
+          --dart-define=ASTRO_LOGIC_EPHEMERIS_BACKEND=astronomy-engine
+
+      - name: Package governed Android evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag_args=()
+          if [[ "${GITHUB_REF_TYPE}" == "tag" ]]; then
+            tag_args=(--release-tag "${GITHUB_REF_NAME}")
+          fi
+          python3 tool/package_release_artifact.py \
+            --platform android \
+            --input-file build/app/outputs/flutter-apk/app-release.apk \
+            --output-dir build/release/android/package \
+            --analyze-log build/release/android/flutter_analyze.log \
+            --test-log build/release/android/flutter_test.log \
+            --native-log build/release/android/native_verification.log \
+            --dependency-graph build/release/android/DEPENDENCY_GRAPH.txt \
+            --lock-file pubspec.lock \
+            --source-commit "${GITHUB_SHA}" \
+            --run-id "${GITHUB_RUN_ID}" \
+            "${tag_args[@]}"
+
+      - name: Upload Android evidence bundle
+        uses: actions/upload-artifact@v7
+        with:
+          name: ASTRO-LOGIC-Android-${{ github.run_number }}
+          path: build/release/android/package/**
+          retention-days: 30
+          if-no-files-found: error
+
+      - name: Upload Android CI diagnostics
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: ASTRO-LOGIC-Android-Diagnostics-${{ github.run_number }}
+          path: |
+            build/release/android/flutter_analyze.log
+            build/release/android/flutter_test.log
+            build/release/android/native_verification.log
+            build/release/android/DEPENDENCY_GRAPH.txt
+            build/release/android/pubspec.lock
+            ASTRO_LOGIC_v082_SOURCE_VALIDATION.json
+            BUILD_READINESS_AUDIT.json
+          retention-days: 14
+          if-no-files-found: ignore

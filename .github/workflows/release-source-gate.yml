@@ -1,0 +1,64 @@
+name: Release Source Gate
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release-source-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+
+      - name: Source-only readiness audit
+        run: python3 tool/static_build_readiness_audit.py
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.44.7"
+          channel: stable
+          cache: true
+
+      - name: Verify tag/full-scope/lock contract
+        if: github.ref_type == 'tag'
+        run: >-
+          python3 tool/final_release_gate.py
+          --require-lock
+          --require-full-scope
+          --tag "${GITHUB_REF_NAME}"
+          --json build/release/source/FINAL_RELEASE_SOURCE_GATE.json
+
+      - name: Verify manual lock contract
+        if: github.ref_type != 'tag'
+        run: >-
+          python3 tool/final_release_gate.py
+          --require-lock
+          --json build/release/source/FINAL_RELEASE_SOURCE_GATE.json
+
+      - name: Resolve exactly from committed lock
+        run: flutter pub get --enforce-lockfile
+
+      - name: Capture source dependency evidence
+        run: |
+          mkdir -p build/release/source
+          flutter --version > build/release/source/FLUTTER_VERSION.txt
+          flutter pub deps --style=compact > build/release/source/DEPENDENCY_GRAPH.txt
+          cp pubspec.lock build/release/source/pubspec.lock
+          sha256sum pubspec.lock > build/release/source/PUBSPEC_LOCK_SHA256.txt
+
+      - name: Upload source release evidence
+        uses: actions/upload-artifact@v7
+        with:
+          name: ASTRO-LOGIC-Release-Source-${{ github.run_number }}
+          path: build/release/source/**
+          retention-days: 30
+          if-no-files-found: error
