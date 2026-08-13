@@ -374,7 +374,11 @@ void main() {
     final result = engine.analyze(
       topic: VedicQuestionTopic.career,
       kundliAnalysis: _analysis(
-        housePolarities: const {10: AnalysisPolarity.supportive},
+        housePolarities: const {
+          10: AnalysisPolarity.supportive,
+          6: AnalysisPolarity.supportive,
+          11: AnalysisPolarity.mixed,
+        },
         dashaScore: 3,
         dashaAreas: const [LifeArea.career],
         ashtakavargaProfile: _ashtakavarga(

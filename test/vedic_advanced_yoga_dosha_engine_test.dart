@@ -160,7 +160,7 @@ void main() {
       ),
     );
 
-    expect(judgment.engineVersion, '30.0.0');
+    expect(judgment.engineVersion, '32.0.0');
     expect(judgment.analysisSchemaVersion, 'kundli-analysis-v32');
     expect(
       analysis.findings.any(

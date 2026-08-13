@@ -11,7 +11,7 @@ void main() {
     final findings = engine.build(
       _output(
         ascendantSign: 0,
-        planetSigns: const {'rahu': 2, 'ketu': 8},
+        planetSigns: const {'rahu': 2, 'ketu': 8, 'jupiter': 7},
       ),
     );
 
@@ -154,7 +154,7 @@ void main() {
       ),
     );
 
-    expect(judgment.engineVersion, '30.0.0');
+    expect(judgment.engineVersion, '32.0.0');
     expect(judgment.analysisSchemaVersion, 'kundli-analysis-v32');
     expect(
       analysis.findings.any((value) => value.code.startsWith('vedic.node.natal.rahu.')),

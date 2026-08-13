@@ -749,10 +749,10 @@ CalculationOutputSnapshot _output({
     'jupiter': 8,
     'venus': 1,
     'saturn': 9,
+    'rahu': 10,
+    'ketu': 4,
     ...planetSigns,
     lordBody: lordSign,
-    if (includeVimshottari) 'rahu': 10,
-    if (includeVimshottari) 'ketu': 4,
   };
   final birthUtc = DateTime.utc(1984, 3, 12, 18, 42);
   final moonLongitude =

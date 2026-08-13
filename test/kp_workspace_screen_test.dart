@@ -13,10 +13,20 @@ void main() {
 
     expect(find.text('KP Native Chart Workspace'), findsOneWidget);
     expect(find.text('Native KP chart casting'), findsOneWidget);
-    expect(find.text('Cast native KP chart'), findsOneWidget);
-    expect(find.text('Sidereal longitude (0°–<360°)'), findsOneWidget);
-    expect(find.text('Ruling planets — review profile'), findsOneWidget);
-    expect(find.text('12-cusp classification framework'), findsOneWidget);
+
+    for (final label in const [
+      'Cast native KP chart',
+      'Sidereal longitude (0°–<360°)',
+      'Ruling planets — review profile',
+      '12-cusp classification framework',
+    ]) {
+      await tester.scrollUntilVisible(
+        find.text(label),
+        240,
+        scrollable: find.byType(Scrollable).first,
+      );
+      expect(find.text(label), findsOneWidget);
+    }
   });
 
   testWidgets('manual point classifier remains available as cross-check', (tester) async {
@@ -24,14 +34,30 @@ void main() {
       const MaterialApp(locale: Locale('en'), home: KpWorkspaceScreen()),
     );
 
-    await tester.enterText(
-      find.widgetWithText(TextField, 'Sidereal longitude (0°–<360°)'),
-      '0.5',
+    final longitudeField =
+        find.widgetWithText(TextField, 'Sidereal longitude (0°–<360°)');
+    await tester.scrollUntilVisible(
+      longitudeField,
+      240,
+      scrollable: find.byType(Scrollable).first,
     );
-    await tester.tap(find.text('Classify sign / star / sub'));
+    await tester.enterText(longitudeField, '0.5');
+    final classifyButton = find.text('Classify sign / star / sub');
+    await tester.scrollUntilVisible(
+      classifyButton,
+      160,
+      scrollable: find.byType(Scrollable).first,
+    );
+    await tester.tap(classifyButton);
     await tester.pump();
 
-    expect(find.textContaining('Ashwini'), findsOneWidget);
+    final ashvini = find.textContaining('Ashwini');
+    await tester.scrollUntilVisible(
+      ashvini,
+      120,
+      scrollable: find.byType(Scrollable).first,
+    );
+    expect(ashvini, findsOneWidget);
     expect(find.textContaining('Sub lord: KETU'), findsOneWidget);
   });
 }

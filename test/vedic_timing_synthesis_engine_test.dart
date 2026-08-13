@@ -105,10 +105,8 @@ void main() {
     expect(analysis.polarity, AnalysisPolarity.mixed);
     expect(analysis.confidence, AnalysisConfidence.low);
     expect(
-      analysis.warningsEn.any(
-        (value) => value.contains('absence of a supportive transit'),
-      ),
-      isTrue,
+      analysis.narrativeEn,
+      contains('provides no directional confirmation on this date'),
     );
   });
 

@@ -47,7 +47,10 @@ void main() {
     expect(chart.segment.number, 1);
     expect(chart.horaryAscendant.siderealLongitude, closeTo(0, 1e-12));
     expect(chart.horaryCusps, hasLength(12));
-    expect(chart.horaryCusps.first.siderealLongitude, closeTo(0, 2 / 3600));
+    expect(
+      _circularDistance(chart.horaryCusps.first.siderealLongitude, 0),
+      lessThanOrEqualTo(2 / 3600),
+    );
     expect(chart.cuspSolutionErrorArcSeconds, lessThanOrEqualTo(2));
     expect(chart.queryMomentChart.planets, hasLength(9));
     expect(chart.toJson()['eventJudgment'], isNotNull);
@@ -59,6 +62,12 @@ void main() {
     expect(governance['automaticFutureTiming'], isFalse);
     expect(governance['practitionerReviewRequired'], isTrue);
   });
+}
+
+
+double _circularDistance(double first, double second) {
+  final raw = (first - second).abs() % 360.0;
+  return raw > 180.0 ? 360.0 - raw : raw;
 }
 
 class _LinearFakeBridge implements KpNativeBridge {

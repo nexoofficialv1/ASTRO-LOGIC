@@ -8,6 +8,8 @@ void main() {
     for (final key in [
       'clients',
       'vedic',
+      'kp',
+      'western',
       'numerology',
       'gemstoneRemedies',
       'reports',
@@ -16,7 +18,7 @@ void main() {
       expect(byKey[key]?.availability, AstroModuleAvailability.available);
     }
 
-    for (final key in ['kp', 'western', 'vastu', 'palmistry', 'practice']) {
+    for (final key in ['vastu', 'palmistry', 'practice']) {
       expect(byKey[key]?.availability, AstroModuleAvailability.comingSoon);
     }
   });
