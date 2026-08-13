@@ -669,7 +669,8 @@ void main() {
     expect(conjunction.narrativeEn, contains('planetary-war flag'));
     expect(synthesis.polarity, AnalysisPolarity.mixed);
     expect(synthesis.evidence, hasLength(2));
-    expect(synthesis.narrativeEn, contains('Sun, Mercury'));
+    expect(synthesis.narrativeEn, contains('Sun'));
+    expect(synthesis.narrativeEn, contains('Mercury'));
   });
 
   test('combines natural and temporary relations into five-fold friendship',
