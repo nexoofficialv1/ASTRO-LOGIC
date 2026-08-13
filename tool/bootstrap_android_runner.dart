@@ -30,30 +30,6 @@ void main() {
     return;
   }
 
-  final gradleProperties = File('${root.path}/android/gradle.properties');
-  if (!gradleProperties.existsSync()) {
-    stderr.writeln('Flutter did not generate android/gradle.properties.');
-    exitCode = 3;
-    return;
-  }
-  var gradlePropertiesSource = gradleProperties.readAsStringSync();
-  final newDslSetting = RegExp(r'^android\.newDsl=.*$', multiLine: true);
-  if (newDslSetting.hasMatch(gradlePropertiesSource)) {
-    gradlePropertiesSource = gradlePropertiesSource.replaceFirst(
-      newDslSetting,
-      'android.newDsl=false',
-    );
-  } else {
-    if (gradlePropertiesSource.isNotEmpty &&
-        !gradlePropertiesSource.endsWith('\n')) {
-      gradlePropertiesSource += '\n';
-    }
-    gradlePropertiesSource +=
-        '# Flutter 3.44.7 / AGP 9.0.1 compatibility for governed CMake DSL.\n'
-        'android.newDsl=false\n';
-  }
-  gradleProperties.writeAsStringSync(gradlePropertiesSource);
-
   final gradle = File('${root.path}/android/app/build.gradle.kts');
   if (!gradle.existsSync()) {
     stderr.writeln('Flutter did not generate android/app/build.gradle.kts.');
@@ -89,9 +65,12 @@ void main() {
 
     const flutterAnchor = '}\n\nflutter {\n';
     const nativeBuild = '''
+}
+
+extensions.configure<com.android.build.api.dsl.ApplicationExtension> {
     externalNativeBuild {
         cmake {
-            path = file("../../native/platform/android/CMakeLists.txt")
+            path = project.file("../../native/platform/android/CMakeLists.txt")
             version = "3.22.1"
         }
     }

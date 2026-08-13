@@ -666,7 +666,7 @@ void main() {
     );
 
     expect(conjunction.narrativeEn, contains('7.000°'));
-    expect(conjunction.narrativeEn, contains('planetary war'));
+    expect(conjunction.narrativeEn, contains('planetary-war flag'));
     expect(synthesis.polarity, AnalysisPolarity.mixed);
     expect(synthesis.evidence, hasLength(2));
     expect(synthesis.narrativeEn, contains('Sun, Mercury'));
@@ -720,7 +720,7 @@ void main() {
 
     expect(finding.polarity, AnalysisPolarity.mixed);
     expect(finding.narrativeEn, contains('1.000°'));
-    expect(finding.narrativeEn, contains('does not declare a victor'));
+    expect(finding.narrativeEn, contains('no computational victor is declared'));
     expect(
       analysis.findings.any(
         (value) => value.code.startsWith('vedic.planetary_war.sun.'),

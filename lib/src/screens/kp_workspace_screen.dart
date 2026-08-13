@@ -188,6 +188,7 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
                     const Divider(height: 20),
                     DropdownButtonFormField<KpEventTopic>(
                       value: _eventTopic,
+                      isExpanded: true,
                       decoration: InputDecoration(
                         labelText: copy('kpEventReviewTopic'),
                         border: const OutlineInputBorder(),
@@ -195,11 +196,15 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
                       items: KpEventTopic.values
                           .map((topic) => DropdownMenuItem<KpEventTopic>(
                                 value: topic,
-                                child: Text(copy(
-                                  topic == KpEventTopic.marriage
-                                      ? 'kpEventMarriage'
-                                      : 'kpEventChildren',
-                                )),
+                                child: Text(
+                                  copy(
+                                    topic == KpEventTopic.marriage
+                                        ? 'kpEventMarriage'
+                                        : 'kpEventChildren',
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               ))
                           .toList(growable: false),
                       onChanged: (value) => setState(() {
@@ -356,6 +361,7 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
                       Expanded(
                         child: DropdownButtonFormField<int>(
                           value: _horaryTopicIndex,
+                          isExpanded: true,
                           decoration: InputDecoration(
                             labelText: copy('kpHoraryTopic'),
                             border: const OutlineInputBorder(),
@@ -363,15 +369,27 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
                           items: [
                             DropdownMenuItem(
                               value: 0,
-                              child: Text(copy('kpHoraryGeneral')),
+                              child: Text(
+                                copy('kpHoraryGeneral'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                             DropdownMenuItem(
                               value: 1,
-                              child: Text(copy('kpEventMarriage')),
+                              child: Text(
+                                copy('kpEventMarriage'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                             DropdownMenuItem(
                               value: 2,
-                              child: Text(copy('kpEventChildren')),
+                              child: Text(
+                                copy('kpEventChildren'),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                           ],
                           onChanged: (value) =>
@@ -546,6 +564,7 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
           const SizedBox(height: 10),
           DropdownButtonFormField<int>(
             value: _weekday,
+            isExpanded: true,
             decoration: InputDecoration(
               labelText: copy('kpWeekday'),
               border: const OutlineInputBorder(),
@@ -554,7 +573,11 @@ class _KpWorkspaceScreenState extends State<KpWorkspaceScreen> {
               7,
               (index) => DropdownMenuItem<int>(
                 value: index + 1,
-                child: Text(copy('weekday${index + 1}')),
+                child: Text(
+                  copy('weekday${index + 1}'),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
             ),
             onChanged: (value) => setState(() => _weekday = value ?? 1),
