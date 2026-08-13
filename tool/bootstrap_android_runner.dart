@@ -84,6 +84,27 @@ flutter {
   }
   gradle.writeAsStringSync(source);
 
+  final wrapperProperties = File(
+    '${root.path}/android/gradle/wrapper/gradle-wrapper.properties',
+  );
+  if (!wrapperProperties.existsSync()) {
+    stderr.writeln('Flutter did not generate Gradle wrapper properties.');
+    exitCode = 6;
+    return;
+  }
+  var wrapperSource = wrapperProperties.readAsStringSync();
+  final networkTimeout = RegExp(r'^networkTimeout=.*$', multiLine: true);
+  if (networkTimeout.hasMatch(wrapperSource)) {
+    wrapperSource = wrapperSource.replaceFirst(
+      networkTimeout,
+      'networkTimeout=60000',
+    );
+  } else {
+    if (!wrapperSource.endsWith('\n')) wrapperSource += '\n';
+    wrapperSource += 'networkTimeout=60000\n';
+  }
+  wrapperProperties.writeAsStringSync(wrapperSource);
+
   final manifest = File(
     '${root.path}/android/app/src/main/AndroidManifest.xml',
   );

@@ -90,8 +90,34 @@ jobs:
         continue-on-error: true
         shell: bash
         run: |
-          set -o pipefail
-          flutter test 2>&1 | tee build/release/android/flutter_test.log
+          set -euo pipefail
+          # Linux CI uses the SQLite library already installed on the runner so
+          # tests do not depend on downloading sqlite3 release assets. The
+          # production pubspec is restored before the Android release build.
+          pkg-config --exists sqlite3
+          cp pubspec.yaml build/release/android/pubspec.production.yaml
+          restore_pubspec() {
+            cp build/release/android/pubspec.production.yaml pubspec.yaml
+            flutter pub get >/dev/null
+          }
+          trap restore_pubspec EXIT
+          if grep -q '^hooks:' pubspec.yaml; then
+            echo 'Unexpected existing hooks block in pubspec.yaml; refusing CI-only mutation.' >&2
+            exit 2
+          fi
+          cat >> pubspec.yaml <<'YAML'
+
+          hooks:
+            user_defines:
+              sqlite3:
+                source: system
+          YAML
+          flutter pub get
+          {
+            echo 'CI_TEST_SQLITE_SOURCE=system'
+            echo 'PRODUCTION_ANDROID_SQLITE_SOURCE=sqlite3-default-bundled'
+            flutter test
+          } 2>&1 | tee build/release/android/flutter_test.log
 
       - name: Verify native astronomical core
         id: native
@@ -104,9 +130,27 @@ jobs:
       - name: Build Android release APK
         id: apk
         continue-on-error: true
-        run: >-
-          flutter build apk --release
-          --dart-define=ASTRO_LOGIC_EPHEMERIS_BACKEND=astronomy-engine
+        shell: bash
+        run: |
+          set -o pipefail
+          mkdir -p build/release/android
+          : > build/release/android/flutter_build_apk.log
+          max_attempts=4
+          for attempt in $(seq 1 "$max_attempts"); do
+            echo "Android release build attempt ${attempt}/${max_attempts}" | tee -a build/release/android/flutter_build_apk.log
+            if flutter build apk --release \
+              --dart-define=ASTRO_LOGIC_EPHEMERIS_BACKEND=astronomy-engine \
+              2>&1 | tee -a build/release/android/flutter_build_apk.log; then
+              exit 0
+            fi
+            if [[ "$attempt" -lt "$max_attempts" ]]; then
+              delay=$((attempt * 15))
+              echo "Transient build/download failure; retrying in ${delay}s." | tee -a build/release/android/flutter_build_apk.log
+              sleep "$delay"
+            fi
+          done
+          echo 'Android release build exhausted all retry attempts.' | tee -a build/release/android/flutter_build_apk.log
+          exit 1
 
       - name: Package governed Android evidence
         id: package
@@ -172,6 +216,7 @@ jobs:
             build/release/android/flutter_analyze.log
             build/release/android/flutter_test.log
             build/release/android/native_verification.log
+            build/release/android/flutter_build_apk.log
             build/release/android/DEPENDENCY_GRAPH.txt
             build/release/android/pubspec.lock
             build/release/android/CI_GATE_STATUS.txt
